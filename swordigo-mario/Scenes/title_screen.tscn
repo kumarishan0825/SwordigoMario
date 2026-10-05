@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bq15druklp47q"]
+
+[ext_resource type="Texture2D" uid="uid://pfcadabalr7i" path="res://1791190338465.png" id="1_klylv"]
+[ext_resource type="Script" uid="uid://cc3i7hpjuo2bt" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+
+[node name="TitleScreen" type="Node2D" unique_id=564146297]
+script = ExtResource("1_p3fck")
+
+[node name="Background" type="TextureRect" parent="." unique_id=68319707]
+offset_top = -3.0
+offset_right = 1376.0
+offset_bottom = 765.0
+texture = ExtResource("1_klylv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Background" unique_id=1422030384]
+clip_contents = false
+layout_mode = 0
+offset_left = 325.0
+offset_top = 185.0
+offset_right = 1132.0
+offset_bottom = 327.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 103
+text = "Swordigo_Mario"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=572665710]
+offset_left = 510.0
+offset_top = 354.0
+offset_right = 826.0
+offset_bottom = 415.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1041500099]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=843855219]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=2023817789]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
