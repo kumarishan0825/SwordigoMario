@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://umi12t2xj10k"]
 
 [ext_resource type="Texture2D" uid="uid://hxm544avkgpj" path="res://1791195700844.png" id="1_2fcgv"]
+[ext_resource type="Script" uid="uid://4y1e1vtsy5bm" path="res://Scenes/level_scene.gd" id="1_qnqh0"]
 [ext_resource type="Texture2D" uid="uid://egfa5x3ixjys" path="res://1791197305721.png" id="2_qnqh0"]
 [ext_resource type="Texture2D" uid="uid://dmn2t7stjnqdx" path="res://1791197260298.png" id="3_lymix"]
 [ext_resource type="Texture2D" uid="uid://bha2eyrjbs2ad" path="res://1791197350191.png" id="4_b7jio"]
 
 [node name="level_scene" type="Node2D" unique_id=208489156]
+script = ExtResource("1_qnqh0")
 
 [node name="BG2" type="TextureRect" parent="." unique_id=1050204765]
 modulate = Color(0.55294555, 0.3376197, 0.3216914, 1)
@@ -37,3 +39,7 @@ offset_right = 964.0
 offset_bottom = 496.0
 icon = ExtResource("4_b7jio")
 expand_icon = true
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
