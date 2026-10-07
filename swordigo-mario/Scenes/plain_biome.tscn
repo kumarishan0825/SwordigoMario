@@ -23,6 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://dg5rjnc5c2a35" path="res://Obstacle_img/147731.png" id="21_8ikp0"]
 [ext_resource type="Texture2D" uid="uid://4d75vi2mb3aa" path="res://Obstacle_img/147733.png" id="22_e1eb0"]
 [ext_resource type="Texture2D" uid="uid://0uihhomh60bv" path="res://Obstacle_img/147730.png" id="23_gsidf"]
+[ext_resource type="Texture2D" uid="uid://wnfjll11ly1v" path="res://Obstacle_img/148000.png" id="24_cfpli"]
+[ext_resource type="Texture2D" uid="uid://oy03tlfcab24" path="res://Obstacle_img/148001.png" id="25_h4fq3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xc32a"]
 animations = [{
@@ -41,7 +43,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"fall_left",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -58,7 +60,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"fall_right",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -103,7 +105,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"jump_left",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -113,11 +115,14 @@ animations = [{
 "texture": ExtResource("10_hk3ad")
 }, {
 "duration": 1.0,
+"texture": ExtResource("10_hk3ad")
+}, {
+"duration": 1.0,
 "texture": ExtResource("6_4uk5m")
 }],
 "loop": 0,
 "name": &"jump_right",
-"speed": 4.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -166,88 +171,212 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_anief"]
-size = Vector2(85.5, 106)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anief"]
+radius = 31.0
+height = 128.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc32a"]
+size = Vector2(12831, 166)
 
 [node name="plain_biome" type="Node2D" unique_id=2000806389]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=954905367]
+scroll_scale = Vector2(0.3, 0.3)
 
 [node name="TextureRect" type="TextureRect" parent="Parallax2D" unique_id=867939274]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = -651.0
+offset_top = -375.0
+offset_right = 1483.0
+offset_bottom = 900.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_hwl5u")
 expand_mode = 1
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=1318222153]
+[node name="TextureRect2" type="TextureRect" parent="Parallax2D" unique_id=290852434]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1470.0
+offset_top = -362.0
+offset_right = 3604.0
+offset_bottom = 854.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hwl5u")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Parallax2D" unique_id=1211835589]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3604.0
+offset_top = -364.0
+offset_right = 5738.0
+offset_bottom = 852.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hwl5u")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Parallax2D" unique_id=1111027798]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5725.0
+offset_top = -360.0
+offset_right = 7859.0
+offset_bottom = 856.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hwl5u")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Parallax2D" unique_id=1444565849]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7857.0
+offset_top = -364.0
+offset_right = 9991.0
+offset_bottom = 852.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hwl5u")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="Parallax2D" unique_id=1145740781]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9982.0
+offset_top = -360.0
+offset_right = 12116.0
+offset_bottom = 856.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hwl5u")
+expand_mode = 1
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=769310086]
 script = ExtResource("3_hwl5u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1405588427]
-position = Vector2(71, 354)
+position = Vector2(83, 338.00003)
 scale = Vector2(0.1921354, 0.20214845)
 sprite_frames = SubResource("SpriteFrames_xc32a")
-animation = &"run_right"
-frame = 5
-frame_progress = 1.0
+animation = &"jump_left"
+frame_progress = 0.5184298
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1010513994]
-position = Vector2(77, 356)
-shape = SubResource("RectangleShape2D_anief")
+position = Vector2(87, 319)
+shape = SubResource("CapsuleShape2D_anief")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1892070650]
-position = Vector2(48, 39)
+position = Vector2(88, 346)
 
 [node name="Pathways" type="StaticBody2D" parent="." unique_id=446773177]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pathways" unique_id=1861482526]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pathways" unique_id=88766647]
+polygon = PackedVector2Array(-6, 379, 146, 381, 313, 490, 456, 494, 522, 470, 810, 476, 965, 404, 1137, 407, 1145, 387, 1237, 384, 1399, 456, 1407, 561, 1475, 623, 1671, 629, 1796, 555, 1968, 469, 2510, 478, 2862, 158, 3128, 151, 3351, 291, 3570, 451, 3864, 511, 4228, 457, 4497, 392, 4866, 385, 4799, 281, 4993, 279, 4992, 780, 5163, 782, 5564, 782, 5050, 164, 5527, 172, 5432, 410, 5801, 427, 5831, 783, 5967, 891, 5986, 487, 5878, 349, 6075, 341, 6051, 404, 6196, 433, 6417, 543, 6654, 511, 6955, 502, 7159, 410, 7538, 426, 7744, 543, 7921, 546, 8047, 525, 8315, 519, 8502, 429, 8739, 438, 8719, 341, 8967, 342, 9000, 276, 9173, 273, 9212, 244, 9370, 244, 9558, 387, 9652, 383, 9670, 443, 9748, 431, 9769, 488, 9786, 502, 9833, 531, 9880, 535, 9941, 532, 9978, 498, 10037, 487, 10093, 480, 10163, 482, 10230, 478, 10275, 467, 10317, 430, 10363, 407, 10410, 406, 10464, 392, 10525, 397, 10678, 479, 11173, 462, 10912, 733, 10578, 736, 10249, 704, 10043, 708, 9855, 708, 9513, 713, 9218, 719, 8746, 780, 8747, 897, 5994, 902, 4751, 808, 1270, 806, -11, 760)
 
-[node name="147723" type="Sprite2D" parent="Pathways" unique_id=1730975444]
-position = Vector2(594.75006, 472.62497)
-scale = Vector2(0.88408434, 0.76139325)
+[node name="147725" type="Sprite2D" parent="Pathways" unique_id=1730975444]
+position = Vector2(598, 484)
+scale = Vector2(0.88408434, 0.9998372)
 texture = ExtResource("18_7svct")
 
-[node name="147728" type="Sprite2D" parent="." unique_id=2101823229]
+[node name="147728" type="Sprite2D" parent="Pathways" unique_id=2101823229]
 position = Vector2(1644.9999, 529)
 scale = Vector2(0.7334665, 0.6464844)
 texture = ExtResource("19_81i5i")
 
-[node name="147729" type="Sprite2D" parent="." unique_id=782539774]
-position = Vector2(3086.9998, 332)
-scale = Vector2(1.3699129, 1.0299478)
+[node name="147729" type="Sprite2D" parent="Pathways" unique_id=782539774]
+position = Vector2(3449, 329)
+scale = Vector2(2.1507995, 1.0305989)
 texture = ExtResource("20_c0hgr")
 
-[node name="147731" type="Sprite2D" parent="." unique_id=506026756]
-position = Vector2(4652, 291)
+[node name="147731" type="Sprite2D" parent="Pathways" unique_id=506026756]
+position = Vector2(5427, 292)
 texture = ExtResource("21_8ikp0")
 
-[node name="147733" type="Sprite2D" parent="." unique_id=148163441]
-position = Vector2(5652, 477)
+[node name="147733" type="Sprite2D" parent="Pathways" unique_id=148163441]
+position = Vector2(10909, 506)
 scale = Vector2(0.6133721, 0.71744794)
 texture = ExtResource("22_e1eb0")
 
-[node name="147723" type="Sprite2D" parent="." unique_id=1290698615]
+[node name="147723" type="Sprite2D" parent="Pathways" unique_id=1290698615]
 position = Vector2(6681, 510)
 texture = ExtResource("18_7svct")
 
-[node name="147724" type="Sprite2D" parent="." unique_id=852602373]
+[node name="147724" type="Sprite2D" parent="Pathways" unique_id=852602373]
 position = Vector2(8058, 514)
 texture = ExtResource("18_7svct")
 
-[node name="147730" type="Sprite2D" parent="." unique_id=1919802623]
-position = Vector2(9895, 334)
-texture = ExtResource("23_gsidf")
-
-[node name="147734" type="Sprite2D" parent="." unique_id=1074401718]
+[node name="147734" type="Sprite2D" parent="Pathways" unique_id=1074401718]
 position = Vector2(8836, 354.99997)
 scale = Vector2(0.29142442, 0.3346354)
 texture = ExtResource("22_e1eb0")
 
-[node name="147735" type="Sprite2D" parent="." unique_id=852674602]
+[node name="147730" type="Sprite2D" parent="Pathways" unique_id=1919802623]
+position = Vector2(9895, 334)
+texture = ExtResource("23_gsidf")
+
+[node name="147735" type="Sprite2D" parent="Pathways" unique_id=852674602]
 position = Vector2(9086, 286)
 scale = Vector2(0.2005814, 0.2565104)
 texture = ExtResource("22_e1eb0")
+
+[node name="VoidArea" type="Area2D" parent="." unique_id=714163246]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VoidArea" unique_id=372106584]
+position = Vector2(5733.5, 799)
+shape = SubResource("RectangleShape2D_xc32a")
+
+[node name="148000" type="Sprite2D" parent="." unique_id=1569745049]
+position = Vector2(612, 395)
+scale = Vector2(0.22291669, 0.2215402)
+texture = ExtResource("24_cfpli")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1883491129]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=818133039]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -206.0
+offset_right = 206.0
+offset_bottom = 81.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/HBoxContainer" unique_id=116925316]
+layout_mode = 2
+
+[node name="148002" type="Sprite2D" parent="UI/HBoxContainer/TextureRect" unique_id=1129077535]
+position = Vector2(102, 42)
+scale = Vector2(0.06625001, 0.071707584)
+texture = ExtResource("25_h4fq3")
+
+[node name="148004" type="Sprite2D" parent="UI/HBoxContainer/TextureRect" unique_id=427565958]
+position = Vector2(218, 42)
+scale = Vector2(0.06625001, 0.071707584)
+texture = ExtResource("25_h4fq3")
+
+[node name="148005" type="Sprite2D" parent="UI/HBoxContainer/TextureRect" unique_id=755365154]
+position = Vector2(279, 42)
+scale = Vector2(0.06625001, 0.071707584)
+texture = ExtResource("25_h4fq3")
+
+[node name="148003" type="Sprite2D" parent="UI/HBoxContainer/TextureRect" unique_id=351953026]
+position = Vector2(162, 42.999996)
+scale = Vector2(0.06625002, 0.071707584)
+texture = ExtResource("25_h4fq3")
+
+[node name="148001" type="Sprite2D" parent="UI/HBoxContainer/TextureRect" unique_id=1266342365]
+position = Vector2(42, 42)
+scale = Vector2(0.06625001, 0.071707584)
+texture = ExtResource("25_h4fq3")
+
+[connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]

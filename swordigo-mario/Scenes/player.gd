@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300
-const JUMP_VELOCITY = -450
+const JUMP_VELOCITY = -650
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -12,7 +12,7 @@ func _physics_process(delta):
 	floor_snap_length = 32.0
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		
+	
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		
@@ -34,6 +34,7 @@ func _physics_process(delta):
 		else:
 			animated_sprite_2d.play("idle_left")
 		
+	move_and_slide()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 	if not is_on_floor():
 		if velocity.y < 0:
 			if facing_direc == "right":
@@ -46,4 +47,8 @@ func _physics_process(delta):
 				animated_sprite_2d.play("fall_right")
 			else:
 				animated_sprite_2d.play("fall_left")
-	move_and_slide()
+
+
+func _on_void_area_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		get_tree().reload_current_scene() # Replace with function body.
