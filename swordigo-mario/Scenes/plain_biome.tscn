@@ -265,11 +265,11 @@ expand_mode = 1
 script = ExtResource("3_hwl5u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1405588427]
-position = Vector2(83, 338.00003)
-scale = Vector2(0.1921354, 0.20214845)
+position = Vector2(82, 337)
+scale = Vector2(0.19190101, 0.20214845)
 sprite_frames = SubResource("SpriteFrames_xc32a")
-animation = &"jump_left"
-frame_progress = 0.5184298
+animation = &"fall_right"
+frame_progress = 0.8354313
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1010513994]
 position = Vector2(87, 319)
@@ -281,7 +281,7 @@ position = Vector2(88, 346)
 [node name="Pathways" type="StaticBody2D" parent="." unique_id=446773177]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pathways" unique_id=88766647]
-polygon = PackedVector2Array(-6, 379, 146, 381, 313, 490, 456, 494, 522, 470, 810, 476, 965, 404, 1137, 407, 1145, 387, 1237, 384, 1399, 456, 1407, 561, 1475, 623, 1671, 629, 1796, 555, 1968, 469, 2510, 478, 2862, 158, 3128, 151, 3351, 291, 3570, 451, 3864, 511, 4228, 457, 4497, 392, 4866, 385, 4799, 281, 4993, 279, 4992, 780, 5163, 782, 5564, 782, 5050, 164, 5527, 172, 5432, 410, 5801, 427, 5831, 783, 5967, 891, 5986, 487, 5878, 349, 6075, 341, 6051, 404, 6196, 433, 6417, 543, 6654, 511, 6955, 502, 7159, 410, 7538, 426, 7744, 543, 7921, 546, 8047, 525, 8315, 519, 8502, 429, 8739, 438, 8719, 341, 8967, 342, 9000, 276, 9173, 273, 9212, 244, 9370, 244, 9558, 387, 9652, 383, 9670, 443, 9748, 431, 9769, 488, 9786, 502, 9833, 531, 9880, 535, 9941, 532, 9978, 498, 10037, 487, 10093, 480, 10163, 482, 10230, 478, 10275, 467, 10317, 430, 10363, 407, 10410, 406, 10464, 392, 10525, 397, 10678, 479, 11173, 462, 10912, 733, 10578, 736, 10249, 704, 10043, 708, 9855, 708, 9513, 713, 9218, 719, 8746, 780, 8747, 897, 5994, 902, 4751, 808, 1270, 806, -11, 760)
+polygon = PackedVector2Array(-6, 379, 146, 381, 313, 490, 456, 494, 522, 470, 810, 476, 962, 395, 1124, 391, 1179, 384, 1262, 389, 1399, 456, 1407, 561, 1475, 623, 1671, 629, 1796, 555, 1968, 469, 2486, 461, 2833, 136, 3127, 131, 3389, 287, 3619, 419, 3900, 487, 4240, 436, 4507, 385, 4866, 385, 4799, 281, 4993, 279, 4992, 780, 5163, 782, 5564, 782, 5050, 164, 5527, 172, 5432, 410, 5801, 427, 5831, 783, 5967, 891, 5986, 487, 5878, 349, 6075, 341, 6051, 404, 6196, 433, 6417, 543, 6654, 511, 6955, 502, 7159, 410, 7538, 426, 7744, 543, 7921, 546, 8047, 525, 8315, 519, 8502, 429, 8739, 438, 8719, 341, 8967, 342, 9000, 276, 9173, 273, 9212, 244, 9370, 244, 9558, 361, 9664, 378, 9681, 416, 9739, 419, 9767, 457, 9803, 487, 9850, 504, 9894, 514, 9947, 504, 10001, 474, 10047, 474, 10111, 468, 10171, 465, 10247, 453, 10292, 433, 10333, 404, 10375, 393, 10428, 385, 10490, 380, 10550, 384, 10671, 455, 11173, 451, 10912, 733, 10578, 736, 10249, 704, 10043, 708, 9855, 708, 9513, 713, 9218, 719, 8746, 780, 8747, 897, 5994, 902, 4751, 808, 1270, 806, -11, 760)
 
 [node name="147725" type="Sprite2D" parent="Pathways" unique_id=1730975444]
 position = Vector2(598, 484)
@@ -329,6 +329,10 @@ position = Vector2(9086, 286)
 scale = Vector2(0.2005814, 0.2565104)
 texture = ExtResource("22_e1eb0")
 
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Pathways" unique_id=803910799]
+position = Vector2(-7, -1)
+polygon = PackedVector2Array(9634, 214, 9813, 212, 10142, 218, 10259, 176, 10354, 125, 10502, 128, 10508, 153, 10450, 182, 10301, 212, 10198, 246, 10107, 280, 9935, 272, 9662, 267)
+
 [node name="VoidArea" type="Area2D" parent="." unique_id=714163246]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VoidArea" unique_id=372106584]
@@ -342,41 +346,48 @@ texture = ExtResource("24_cfpli")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1883491129]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=818133039]
+[node name="Heart_Container" type="HBoxContainer" parent="UI" unique_id=818133039]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -206.0
-offset_right = 206.0
-offset_bottom = 81.0
+offset_left = -174.5
+offset_right = 174.5
+offset_bottom = 73.0
 grow_horizontal = 2
 
-[node name="TextureRect" type="TextureRect" parent="UI/HBoxContainer" unique_id=116925316]
+[node name="Heart1" type="TextureRect" parent="UI/Heart_Container" unique_id=1343231588]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-
-[node name="148002" type="Sprite2D" parent="UI/HBoxContainer/TextureRect" unique_id=1129077535]
-position = Vector2(102, 42)
-scale = Vector2(0.06625001, 0.071707584)
 texture = ExtResource("25_h4fq3")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="148004" type="Sprite2D" parent="UI/HBoxContainer/TextureRect" unique_id=427565958]
-position = Vector2(218, 42)
-scale = Vector2(0.06625001, 0.071707584)
+[node name="Heart2" type="TextureRect" parent="UI/Heart_Container" unique_id=815738041]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
 texture = ExtResource("25_h4fq3")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="148005" type="Sprite2D" parent="UI/HBoxContainer/TextureRect" unique_id=755365154]
-position = Vector2(279, 42)
-scale = Vector2(0.06625001, 0.071707584)
+[node name="Heart3" type="TextureRect" parent="UI/Heart_Container" unique_id=149279315]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
 texture = ExtResource("25_h4fq3")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="148003" type="Sprite2D" parent="UI/HBoxContainer/TextureRect" unique_id=351953026]
-position = Vector2(162, 42.999996)
-scale = Vector2(0.06625002, 0.071707584)
+[node name="Heart4" type="TextureRect" parent="UI/Heart_Container" unique_id=252353947]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
 texture = ExtResource("25_h4fq3")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="148001" type="Sprite2D" parent="UI/HBoxContainer/TextureRect" unique_id=1266342365]
-position = Vector2(42, 42)
-scale = Vector2(0.06625001, 0.071707584)
+[node name="Heart5" type="TextureRect" parent="UI/Heart_Container" unique_id=1056855300]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
 texture = ExtResource("25_h4fq3")
+expand_mode = 1
+stretch_mode = 5
 
 [connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]
