@@ -6,53 +6,88 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var facing_direc = "right"
+var is_fighting = false
+var figh_id = 0
 
-func _physics_process(delta):
+var respawn_position: Vector2 = Vector2.ZERO
+func _ready():
 	floor_constant_speed = true
 	floor_snap_length = 32.0
+	respawn_position = global_position
+	animated_sprite_2d.sprite_frames.set_animation_loop("fight", false)
+	animated_sprite_2d.animation_finished.connect(_on_animation_finished)
+	update_heart_ui()
+	
+func _input(event):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		play_fight()
+
+func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	if Input.is_action_just_released("ui_accept") and velocity.y < 0:
+		velocity.y *= 0.5
 		
 	var direction = Input.get_axis("ui_left","ui_right")
 	
-	if direction:
+	if direction != 0:
 		velocity.x = direction * SPEED
-		if direction > 0:
-			facing_direc = "right"
-			animated_sprite_2d.play("run_right")
-		else:
-			facing_direc = "left"
-			animated_sprite_2d.play("run_left")
-			
+		facing_direc = "right" if direction > 0 else "left"
+
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		if facing_direc == "right":
-			animated_sprite_2d.play("idle_right")
-		else:
-			animated_sprite_2d.play("idle_left")
-		
-	move_and_slide()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+	move_and_slide()
+	update_animation()
+	
+func update_animation():
+	if is_fighting:
+		return
+	animated_sprite_2d.flip_h = false
 	if not is_on_floor():
-		print("Hawa mein vel y", velocity.y , "vel x", velocity.x)
 		if velocity.y < 0:
-			if velocity.x > 0:
-				print("Plaring jump right")
-				animated_sprite_2d.play("jump_right")
-			elif velocity.x < 0:
-				print("Plaring jump left")
-				animated_sprite_2d.play("jump_left")
-				
+			var t = 1.0 - (velocity.y / JUMP_VELOCITY)
+			scrub_animation("jump_" + facing_direc, t)
 		else:
-			if velocity.x > 0:
-				print("Plaring fall right")
-				animated_sprite_2d.play("fall_right")
-			elif velocity.x < 0:
-				print("Plaring fall left")
-				animated_sprite_2d.play("fall_left")
-
+			var t = velocity.y / abs(JUMP_VELOCITY)
+			scrub_animation("fall_" + facing_direc, t)
+				
+	elif  abs(velocity.x) > 1.0:
+		animated_sprite_2d.play("run_" + facing_direc)
+	else:
+		animated_sprite_2d.play("idle_" + facing_direc)
+			
+func scrub_animation(anim_name: String, progress: float):
+	var frameCount = animated_sprite_2d.sprite_frames.get_frame_count(anim_name)
+	if animated_sprite_2d.animation != anim_name:
+		animated_sprite_2d.animation = anim_name
+	animated_sprite_2d.pause()
+	animated_sprite_2d.frame = min(int(clamp(progress, 0.0, 1.0)* frameCount), frameCount - 1)
+	
+	
+func play_fight():
+	if is_fighting:
+		return
+	is_fighting = true
+	figh_id += 1
+	var this_fight = figh_id
+	
+	animated_sprite_2d.flip_h = (facing_direc == "left")
+	animated_sprite_2d.play("fight")
+	var frames = animated_sprite_2d.sprite_frames.get_frame_count("fight")
+	var fps = animated_sprite_2d.sprite_frames.get_animation_speed("fight")
+	await get_tree().create_timer(frames / fps + 0.1).timeout
+	
+	if is_inside_tree() and is_fighting and this_fight == figh_id:
+		is_fighting = false
+		animated_sprite_2d.flip_h = false
+		
+func _on_animation_finished():
+	if animated_sprite_2d.animation == "fight":
+		is_fighting = false
+		animated_sprite_2d.flip_h = false
 
 func _on_void_area_body_entered(body):
 	if body.name == "Player":
@@ -65,11 +100,8 @@ func _on_void_area_body_entered(body):
 
 var maxHeart: float = 5.0
 var currentHeart: float = 5.0
-var respawn_position: Vector2 = Vector2.ZERO
 
-func _ready():
-	respawn_position = global_position
-	update_heart_ui()
+
 	
 func take_damage(amount: float):
 	currentHeart -= amount
