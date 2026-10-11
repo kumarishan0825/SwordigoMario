@@ -5,9 +5,16 @@ const JUMP_VELOCITY = -650
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+const FightDamage = 0.5
+const SpellDamage = 1.5
+@onready var attack_area: Area2D = $AttackArea
+@onready var spell_area: Area2D = $SpellArea
+
 var facing_direc = "right"
 var is_fighting = false
 var figh_id = 0
+var attackType = ""
+var hitBodies : Array = []
 
 var respawn_position: Vector2 = Vector2.ZERO
 func _ready():
@@ -15,16 +22,22 @@ func _ready():
 	floor_snap_length = 32.0
 	respawn_position = global_position
 	animated_sprite_2d.sprite_frames.set_animation_loop("fight", false)
+	animated_sprite_2d.sprite_frames.set_animation_loop("spell", false)
 	animated_sprite_2d.animation_finished.connect(_on_animation_finished)
+	attack_area.monitoring = false
+	spell_area.monitoring = false
 	update_heart_ui()
 	
 func _input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		play_fight()
+	if event is InputEventMouseButton and event.pressed and not Global.isTalking:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			start_attack("fight")
+		elif event.button_index == MOUSE_BUTTON_RIGHT:
+			start_attack("spell")
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += gravity * _delta
 	
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -40,6 +53,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
+	deal_attack_damage()
 	update_animation()
 	
 func update_animation():
@@ -67,27 +81,56 @@ func scrub_animation(anim_name: String, progress: float):
 	animated_sprite_2d.frame = min(int(clamp(progress, 0.0, 1.0)* frameCount), frameCount - 1)
 	
 	
-func play_fight():
+func start_attack(type: String):
 	if is_fighting:
 		return
 	is_fighting = true
 	figh_id += 1
 	var this_fight = figh_id
+	hitBodies.clear()
+	var side = -1 if facing_direc == "left" else 1
+	attack_area.scale.x = side
+	spell_area.scale.x = side
+	if type == "fight":
+		attack_area.monitoring = true
+		spell_area.monitoring = false
+	elif type == "spell":
+		attack_area.monitoring = false
+		spell_area.monitoring = true
 	
 	animated_sprite_2d.flip_h = (facing_direc == "left")
-	animated_sprite_2d.play("fight")
-	var frames = animated_sprite_2d.sprite_frames.get_frame_count("fight")
-	var fps = animated_sprite_2d.sprite_frames.get_animation_speed("fight")
+	animated_sprite_2d.play(type)
+	var frames = animated_sprite_2d.sprite_frames.get_frame_count(type)
+	var fps = animated_sprite_2d.sprite_frames.get_animation_speed(type)
 	await get_tree().create_timer(frames / fps + 0.1).timeout
 	
 	if is_inside_tree() and is_fighting and this_fight == figh_id:
-		is_fighting = false
-		animated_sprite_2d.flip_h = false
+		endAttack()
 		
+func endAttack():
+	is_fighting = false
+	attackType = ""
+	attack_area.set_deferred("monitoring", false)
+	spell_area.set_deferred("monitoring", false)
+	animated_sprite_2d.flip_h = false
+	
+func deal_attack_damage():
+	if not is_fighting:
+		return
+	var area = attack_area if attackType == "fight" else spell_area
+	var damage = FightDamage if attackType == "fight" else SpellDamage
+	if not area.monitoring:
+		area.monitoring = true
+	var overlapping = area.get_overlapping_bodies()
+	for body in overlapping:
+		if body in hitBodies:
+			continue
+		if body.is_in_group("enemy") and body.has_method("take_damage"):
+			body.take_damage(damage)
+			hitBodies.append(body)
 func _on_animation_finished():
-	if animated_sprite_2d.animation == "fight":
-		is_fighting = false
-		animated_sprite_2d.flip_h = false
+	if animated_sprite_2d.animation == "fight" or animated_sprite_2d.animation == "spell":
+		endAttack() 
 
 func _on_void_area_body_entered(body):
 	if body.name == "Player":

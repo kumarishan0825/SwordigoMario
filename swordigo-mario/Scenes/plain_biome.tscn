@@ -26,9 +26,16 @@
 [ext_resource type="Texture2D" uid="uid://bfm1upp680non" path="res://Obstacle_img/147729.png" id="20_c0hgr"]
 [ext_resource type="Texture2D" uid="uid://dg5rjnc5c2a35" path="res://Obstacle_img/147731.png" id="21_8ikp0"]
 [ext_resource type="Texture2D" uid="uid://4d75vi2mb3aa" path="res://Obstacle_img/147733.png" id="22_e1eb0"]
+[ext_resource type="Texture2D" uid="uid://s0cldclqm4s1" path="res://Characters_img/148874.png" id="22_vkwvj"]
+[ext_resource type="Texture2D" uid="uid://bcg082ft1uv1k" path="res://Characters_img/148875.png" id="23_571hr"]
 [ext_resource type="Texture2D" uid="uid://0uihhomh60bv" path="res://Obstacle_img/147730.png" id="23_gsidf"]
 [ext_resource type="Texture2D" uid="uid://wnfjll11ly1v" path="res://Obstacle_img/148000.png" id="24_cfpli"]
+[ext_resource type="Texture2D" uid="uid://bd2ymlg5skhh0" path="res://Characters_img/148876.png" id="24_pynw0"]
 [ext_resource type="Texture2D" uid="uid://oy03tlfcab24" path="res://Obstacle_img/148001.png" id="25_h4fq3"]
+[ext_resource type="Texture2D" uid="uid://cda6sf1f05dde" path="res://Characters_img/148877.png" id="25_tsra0"]
+[ext_resource type="Texture2D" uid="uid://bsd33gohddl1y" path="res://Characters_img/148878.png" id="26_vty1q"]
+[ext_resource type="Script" uid="uid://dnbkleao6oavs" path="res://Scenes/master.gd" id="35_pynw0"]
+[ext_resource type="Texture2D" uid="uid://db08nltripq2g" path="res://Characters_img/148869.png" id="36_tsra0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xc32a"]
 animations = [{
@@ -126,7 +133,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"jump_left",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -190,16 +197,52 @@ animations = [{
 "loop": 0,
 "name": &"run_right",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_vkwvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_571hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_pynw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tsra0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_vty1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4uk5m")
+}],
+"loop": 1,
+"name": &"spell",
+"speed": 9.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anief"]
 radius = 31.0
 height = 128.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_anief"]
+size = Vector2(130.5, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obclv"]
+size = Vector2(152.5, 155)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xc32a"]
 size = Vector2(12831, 166)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_145gp"]
+size = Vector2(387, 254)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vty1q"]
+bg_color = Color(0.08839024, 0.012878674, 0.013571991, 1)
+
 [node name="plain_biome" type="Node2D" unique_id=2000806389]
+y_sort_enabled = true
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=954905367]
 scroll_scale = Vector2(0.3, 0.3)
@@ -283,14 +326,15 @@ texture = ExtResource("2_hwl5u")
 expand_mode = 1
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=769310086]
+y_sort_enabled = true
 script = ExtResource("3_hwl5u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1405588427]
 position = Vector2(82, 337)
 scale = Vector2(0.19190101, 0.20214845)
 sprite_frames = SubResource("SpriteFrames_xc32a")
-animation = &"jump_left"
-frame_progress = 0.40371954
+animation = &"spell"
+frame_progress = 0.33037326
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1010513994]
 position = Vector2(87, 319)
@@ -299,7 +343,22 @@ shape = SubResource("CapsuleShape2D_anief")
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1892070650]
 position = Vector2(88, 346)
 
+[node name="AttackArea" type="Area2D" parent="Player" unique_id=1305148165]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea" unique_id=11738436]
+position = Vector2(82.75, 286)
+shape = SubResource("RectangleShape2D_anief")
+debug_color = Color(0.7961066, 0.37936485, 0.5082315, 0.41960785)
+
+[node name="SpellArea" type="Area2D" parent="Player" unique_id=1675102292]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/SpellArea" unique_id=35129716]
+position = Vector2(85.75, 281)
+shape = SubResource("RectangleShape2D_obclv")
+debug_color = Color(0.69831973, 0.49294108, 0.056531973, 0.41960785)
+
 [node name="Pathways" type="StaticBody2D" parent="." unique_id=446773177]
+y_sort_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pathways" unique_id=88766647]
 polygon = PackedVector2Array(-6, 379, 146, 381, 313, 490, 456, 494, 522, 470, 810, 476, 962, 395, 1124, 391, 1179, 384, 1262, 389, 1399, 456, 1407, 561, 1475, 623, 1671, 629, 1796, 555, 1968, 469, 2486, 461, 2833, 136, 3127, 131, 3389, 287, 3619, 419, 3900, 487, 4240, 436, 4507, 385, 4866, 385, 4799, 281, 4993, 279, 4992, 780, 5163, 782, 5564, 782, 5050, 164, 5527, 172, 5432, 410, 5801, 427, 5831, 783, 5967, 891, 5986, 487, 5878, 349, 6075, 341, 6051, 404, 6196, 433, 6417, 543, 6654, 511, 6955, 502, 7159, 410, 7538, 426, 7744, 543, 7921, 546, 8047, 525, 8315, 519, 8502, 429, 8739, 438, 8719, 341, 8967, 342, 9000, 276, 9173, 273, 9212, 244, 9370, 244, 9558, 361, 9664, 378, 9681, 416, 9739, 419, 9767, 457, 9803, 487, 9850, 504, 9894, 514, 9947, 504, 10001, 474, 10047, 474, 10111, 468, 10171, 465, 10247, 453, 10292, 433, 10333, 404, 10375, 393, 10428, 385, 10490, 380, 10550, 384, 10671, 455, 11173, 451, 10912, 733, 10578, 736, 10249, 704, 10043, 708, 9855, 708, 9513, 713, 9218, 719, 8746, 780, 8747, 897, 5994, 902, 4751, 808, 1270, 806, -11, 760)
@@ -410,5 +469,34 @@ layout_mode = 2
 texture = ExtResource("25_h4fq3")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Master" type="Area2D" parent="." unique_id=1565596837]
+y_sort_enabled = true
+position = Vector2(10032, 416)
+script = ExtResource("35_pynw0")
+
+[node name="Master_lay" type="Sprite2D" parent="Master" unique_id=1407483860]
+position = Vector2(58.281425, 18.218761)
+scale = Vector2(0.13453156, 0.1691546)
+texture = ExtResource("36_tsra0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Master" unique_id=60415860]
+position = Vector2(58.5, -35)
+shape = SubResource("RectangleShape2D_145gp")
+
+[node name="Textbox" type="PanelContainer" parent="Master" unique_id=388959861]
+visible = false
+z_index = 5
+y_sort_enabled = true
+offset_left = -124.0
+offset_top = -105.0
+offset_right = 79.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vty1q")
+
+[node name="DialogueLabel" type="Label" parent="Master/Textbox" unique_id=1844650069]
+y_sort_enabled = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "DD"
 
 [connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]
