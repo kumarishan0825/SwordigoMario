@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bj10av6e01cf1"]
 
 [ext_resource type="Texture2D" uid="uid://cbkqiftkmu3t" path="res://1791296197031.png" id="2_hwl5u"]
+[ext_resource type="Texture2D" uid="uid://dc0auodglo4ry" path="res://Obstacle_img/1791824304249.png" id="2_vty1q"]
 [ext_resource type="Texture2D" uid="uid://cbr0q8f6exk34" path="res://Characters_img/147687.png" id="3_cfpli"]
 [ext_resource type="Script" uid="uid://clta5b8n833id" path="res://Scenes/player.gd" id="3_hwl5u"]
 [ext_resource type="Texture2D" uid="uid://djthrji314a45" path="res://Characters_img/147707.png" id="4_h4fq3"]
@@ -34,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://oy03tlfcab24" path="res://Obstacle_img/148001.png" id="25_h4fq3"]
 [ext_resource type="Texture2D" uid="uid://cda6sf1f05dde" path="res://Characters_img/148877.png" id="25_tsra0"]
 [ext_resource type="Texture2D" uid="uid://bsd33gohddl1y" path="res://Characters_img/148878.png" id="26_vty1q"]
+[ext_resource type="Texture2D" uid="uid://348bpvrhree1" path="res://Obstacle_img/1791824325803.png" id="33_tsra0"]
 [ext_resource type="Script" uid="uid://dnbkleao6oavs" path="res://Scenes/master.gd" id="35_pynw0"]
 [ext_resource type="Texture2D" uid="uid://db08nltripq2g" path="res://Characters_img/148869.png" id="36_tsra0"]
 
@@ -325,6 +327,16 @@ grow_vertical = 2
 texture = ExtResource("2_hwl5u")
 expand_mode = 1
 
+[node name="1791824304249" type="Sprite2D" parent="Parallax2D" unique_id=411953000]
+position = Vector2(11941.001, 664.625)
+scale = Vector2(0.3801677, 0.339)
+texture = ExtResource("2_vty1q")
+
+[node name="1791824304250" type="Sprite2D" parent="Parallax2D" unique_id=72906280]
+position = Vector2(5742.9995, 1138)
+scale = Vector2(52.752064, 3.304)
+texture = ExtResource("2_vty1q")
+
 [node name="Player" type="CharacterBody2D" parent="." unique_id=769310086]
 y_sort_enabled = true
 script = ExtResource("3_hwl5u")
@@ -413,6 +425,16 @@ texture = ExtResource("22_e1eb0")
 position = Vector2(-7, -1)
 polygon = PackedVector2Array(9634, 214, 9813, 212, 10142, 218, 10259, 176, 10354, 125, 10502, 128, 10508, 153, 10450, 182, 10301, 212, 10198, 246, 10107, 280, 9935, 272, 9662, 267)
 
+[node name="1791824325803" type="Sprite2D" parent="Pathways" unique_id=304395643]
+position = Vector2(1100.0001, 747)
+scale = Vector2(0.3042328, 0.30813953)
+texture = ExtResource("33_tsra0")
+
+[node name="1791824325804" type="Sprite2D" parent="Pathways" unique_id=913826659]
+position = Vector2(2073.75, 668)
+scale = Vector2(0.6851852, 0.6395349)
+texture = ExtResource("33_tsra0")
+
 [node name="VoidArea" type="Area2D" parent="." unique_id=714163246]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VoidArea" unique_id=372106584]
@@ -498,5 +520,21 @@ y_sort_enabled = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "DD"
+
+[node name="1791824325803" type="Sprite2D" parent="." unique_id=512361724]
+position = Vector2(4650, 587)
+texture = ExtResource("33_tsra0")
+
+[node name="1791824325804" type="Sprite2D" parent="." unique_id=45356817]
+position = Vector2(7204, 760)
+texture = ExtResource("33_tsra0")
+
+[node name="1791824325805" type="Sprite2D" parent="." unique_id=1514957]
+position = Vector2(8601, 772)
+texture = ExtResource("33_tsra0")
+
+[node name="1791824325806" type="Sprite2D" parent="." unique_id=1955028727]
+position = Vector2(10449, 595)
+texture = ExtResource("33_tsra0")
 
 [connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]
