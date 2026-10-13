@@ -1,0 +1,908 @@
+[gd_scene format=3 uid="uid://176pv2qj7yml"]
+
+[ext_resource type="Texture2D" uid="uid://b74gmfwyv3n4x" path="res://1791296126791.png" id="1_y5om2"]
+[ext_resource type="Texture2D" uid="uid://dc0auodglo4ry" path="res://Obstacle_img/1791824304249.png" id="2_l6ibx"]
+[ext_resource type="Texture2D" uid="uid://348bpvrhree1" path="res://Obstacle_img/1791824325803.png" id="3_fnhb3"]
+[ext_resource type="Texture2D" uid="uid://bdrffvbhsjwue" path="res://Obstacle_img/149810.png" id="4_eyba8"]
+[ext_resource type="Texture2D" uid="uid://boql6ydadsrc1" path="res://Obstacle_img/149812.png" id="5_ola45"]
+[ext_resource type="Texture2D" uid="uid://ctjbnq1wsdeft" path="res://Obstacle_img/149803.png" id="6_nw5cv"]
+[ext_resource type="Texture2D" uid="uid://4d75vi2mb3aa" path="res://Obstacle_img/147733.png" id="7_77vue"]
+[ext_resource type="Texture2D" uid="uid://b8mwxb4k0mtah" path="res://Obstacle_img/149807.png" id="8_pw6re"]
+[ext_resource type="Texture2D" uid="uid://dyq474j5pvwr2" path="res://Obstacle_img/149800.png" id="9_kcjm6"]
+[ext_resource type="Texture2D" uid="uid://col35s1c0yr2v" path="res://Obstacle_img/149802.png" id="10_cvaq6"]
+[ext_resource type="Texture2D" uid="uid://dg5rjnc5c2a35" path="res://Obstacle_img/147731.png" id="11_xe8im"]
+[ext_resource type="Texture2D" uid="uid://crpmlsqmk36m0" path="res://Obstacle_img/149811.png" id="12_22ma8"]
+[ext_resource type="Texture2D" uid="uid://6lfjnf6hoiix" path="res://Obstacle_img/149804.png" id="13_oaggd"]
+[ext_resource type="Texture2D" uid="uid://bfm1upp680non" path="res://Obstacle_img/147729.png" id="14_ary44"]
+[ext_resource type="Texture2D" uid="uid://cr3ua1cn1imj8" path="res://Obstacle_img/149801.png" id="15_6i1qe"]
+[ext_resource type="Script" uid="uid://clta5b8n833id" path="res://Scenes/player.gd" id="16_aecoh"]
+[ext_resource type="Texture2D" uid="uid://djthrji314a45" path="res://Characters_img/147707.png" id="17_cn0sw"]
+[ext_resource type="Texture2D" uid="uid://cbr0q8f6exk34" path="res://Characters_img/147687.png" id="18_1p3iq"]
+[ext_resource type="Texture2D" uid="uid://cgbkckhby1ghx" path="res://Characters_img/147703.png" id="19_1n82j"]
+[ext_resource type="Texture2D" uid="uid://cjek6riqobgex" path="res://Characters_img/147689.png" id="20_ftwnn"]
+[ext_resource type="Texture2D" uid="uid://tg2ms8v3nkf7" path="res://Characters_img/148495.png" id="21_0ifoi"]
+[ext_resource type="Texture2D" uid="uid://ctyq4dqo3812k" path="res://Characters_img/148505.png" id="22_edf78"]
+[ext_resource type="Texture2D" uid="uid://xcqqjgbptj0x" path="res://Characters_img/148506.png" id="23_ehmc6"]
+[ext_resource type="Texture2D" uid="uid://bp4fbgrpll8dl" path="res://Characters_img/148507.png" id="24_u1a25"]
+[ext_resource type="Texture2D" uid="uid://bwka11c526tb7" path="res://Characters_img/147691.png" id="25_2mf04"]
+[ext_resource type="Texture2D" uid="uid://t8lqcfh6k4oj" path="res://Characters_img/147690.png" id="26_awcaw"]
+[ext_resource type="Texture2D" uid="uid://k6fvegvmqtuk" path="res://Characters_img/147702.png" id="27_37a2g"]
+[ext_resource type="Texture2D" uid="uid://dqn2bqm72k1an" path="res://Characters_img/147706.png" id="28_rjl6v"]
+[ext_resource type="Texture2D" uid="uid://jpl3fn5h23ok" path="res://Characters_img/147692.png" id="29_s7toi"]
+[ext_resource type="Texture2D" uid="uid://cnn6x2agjeylw" path="res://Characters_img/147694.png" id="30_j6ds1"]
+[ext_resource type="Texture2D" uid="uid://df7ohhey4jqot" path="res://Characters_img/147695.png" id="31_vy4xu"]
+[ext_resource type="Texture2D" uid="uid://bq5c10p6nif2d" path="res://Characters_img/147696.png" id="32_viwe5"]
+[ext_resource type="Texture2D" uid="uid://ba3mbn44h4g77" path="res://Characters_img/147693.png" id="33_y5lge"]
+[ext_resource type="Texture2D" uid="uid://rkeyvtj36y0h" path="res://Characters_img/147704.png" id="34_8be85"]
+[ext_resource type="Texture2D" uid="uid://btb486lgyj1cv" path="res://Characters_img/147705.png" id="35_b7yip"]
+[ext_resource type="Texture2D" uid="uid://s0cldclqm4s1" path="res://Characters_img/148874.png" id="36_eiwla"]
+[ext_resource type="Texture2D" uid="uid://bcg082ft1uv1k" path="res://Characters_img/148875.png" id="37_av3y4"]
+[ext_resource type="Texture2D" uid="uid://bd2ymlg5skhh0" path="res://Characters_img/148876.png" id="38_iqdem"]
+[ext_resource type="Texture2D" uid="uid://cda6sf1f05dde" path="res://Characters_img/148877.png" id="39_slt31"]
+[ext_resource type="Texture2D" uid="uid://bsd33gohddl1y" path="res://Characters_img/148878.png" id="40_yfa5r"]
+[ext_resource type="Texture2D" uid="uid://oy03tlfcab24" path="res://Obstacle_img/148001.png" id="41_l6ibx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bwyvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_cn0sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cn0sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cn0sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1p3iq")
+}],
+"loop": 1,
+"name": &"fall_left",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_1n82j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1n82j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1n82j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ftwnn")
+}],
+"loop": 1,
+"name": &"fall_right",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_0ifoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_edf78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ehmc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_u1a25")
+}],
+"loop": 1,
+"name": &"fight",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_1p3iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_2mf04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1p3iq")
+}],
+"loop": 1,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_ftwnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_awcaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ftwnn")
+}],
+"loop": 1,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_1p3iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_37a2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_37a2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_37a2g")
+}],
+"loop": 1,
+"name": &"jump_left",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_ftwnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rjl6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rjl6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rjl6v")
+}],
+"loop": 0,
+"name": &"jump_right",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_1p3iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_s7toi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_j6ds1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_vy4xu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_viwe5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_2mf04")
+}],
+"loop": 1,
+"name": &"run_left",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_awcaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_y5lge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_8be85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_b7yip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_y5lge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ftwnn")
+}],
+"loop": 0,
+"name": &"run_right",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_eiwla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_av3y4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_iqdem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_slt31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_yfa5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ftwnn")
+}],
+"loop": 1,
+"name": &"spell",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d6w64"]
+radius = 27.0
+height = 86.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmcuh"]
+size = Vector2(130.5, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwseq"]
+size = Vector2(152.5, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5om2"]
+size = Vector2(43699, 166)
+
+[sub_resource type="GDScript" id="GDScript_l6ibx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnhb3"]
+size = Vector2(1524, 1482)
+
+[node name="p_b2" type="Node2D" unique_id=1634788415]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=703546189]
+scroll_scale = Vector2(0.3, 0.3)
+
+[node name="BG" type="TextureRect" parent="Parallax2D" unique_id=1354481581]
+offset_left = -393.0
+offset_top = -623.0
+offset_right = 1608.0
+offset_bottom = 879.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG22" type="TextureRect" parent="Parallax2D" unique_id=1469235664]
+offset_left = -2387.0
+offset_top = -594.0
+offset_right = -386.0
+offset_bottom = 879.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG2" type="TextureRect" parent="Parallax2D" unique_id=774666185]
+offset_left = 1602.0
+offset_top = -637.0
+offset_right = 3603.0
+offset_bottom = 875.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG3" type="TextureRect" parent="Parallax2D" unique_id=1948591693]
+offset_left = 3592.0
+offset_top = -646.0
+offset_right = 5593.0
+offset_bottom = 875.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG4" type="TextureRect" parent="Parallax2D" unique_id=1300253769]
+offset_left = 5585.0
+offset_top = -675.0
+offset_right = 7586.0
+offset_bottom = 875.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG5" type="TextureRect" parent="Parallax2D" unique_id=1248804897]
+offset_left = 7566.0
+offset_top = -705.0
+offset_right = 9567.0
+offset_bottom = 873.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG6" type="TextureRect" parent="Parallax2D" unique_id=713377824]
+offset_left = 9533.0
+offset_top = -734.0
+offset_right = 11534.0
+offset_bottom = 873.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG7" type="TextureRect" parent="Parallax2D" unique_id=1100469224]
+offset_left = 11505.0
+offset_top = -724.0
+offset_right = 13506.0
+offset_bottom = 866.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG8" type="TextureRect" parent="Parallax2D" unique_id=2131952959]
+offset_left = 13488.0
+offset_top = -743.0
+offset_right = 15489.0
+offset_bottom = 864.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG9" type="TextureRect" parent="Parallax2D" unique_id=898017064]
+offset_left = 15483.0
+offset_top = -772.0
+offset_right = 17484.0
+offset_bottom = 862.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG10" type="TextureRect" parent="Parallax2D" unique_id=727715083]
+offset_left = 17480.0
+offset_top = -775.0
+offset_right = 19481.0
+offset_bottom = 855.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG11" type="TextureRect" parent="Parallax2D" unique_id=1395421324]
+offset_left = 19452.0
+offset_top = -790.0
+offset_right = 21453.0
+offset_bottom = 857.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG12" type="TextureRect" parent="Parallax2D" unique_id=1718455558]
+offset_left = 21433.0
+offset_top = -795.0
+offset_right = 23434.0
+offset_bottom = 857.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG13" type="TextureRect" parent="Parallax2D" unique_id=493659689]
+offset_left = 23423.0
+offset_top = -804.0
+offset_right = 25424.0
+offset_bottom = 857.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG14" type="TextureRect" parent="Parallax2D" unique_id=2039418953]
+offset_left = 25411.0
+offset_top = -799.0
+offset_right = 27412.0
+offset_bottom = 857.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG15" type="TextureRect" parent="Parallax2D" unique_id=1677762144]
+offset_left = 27397.0
+offset_top = -801.0
+offset_right = 29398.0
+offset_bottom = 855.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG16" type="TextureRect" parent="Parallax2D" unique_id=834174560]
+offset_left = 29380.0
+offset_top = -808.0
+offset_right = 31381.0
+offset_bottom = 857.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG17" type="TextureRect" parent="Parallax2D" unique_id=1381126312]
+offset_left = 31365.0
+offset_top = -808.0
+offset_right = 33366.0
+offset_bottom = 862.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG18" type="TextureRect" parent="Parallax2D" unique_id=1768250578]
+offset_left = 33346.0
+offset_top = -808.0
+offset_right = 35347.0
+offset_bottom = 862.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG19" type="TextureRect" parent="Parallax2D" unique_id=1112285556]
+offset_left = 35343.0
+offset_top = -822.0
+offset_right = 37344.0
+offset_bottom = 857.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG20" type="TextureRect" parent="Parallax2D" unique_id=85877071]
+offset_left = 37333.0
+offset_top = -832.0
+offset_right = 39334.0
+offset_bottom = 855.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="BG21" type="TextureRect" parent="Parallax2D" unique_id=389239879]
+offset_left = 39316.0
+offset_top = -825.0
+offset_right = 41317.0
+offset_bottom = 858.0
+texture = ExtResource("1_y5om2")
+expand_mode = 1
+
+[node name="1791824304249" type="Sprite2D" parent="Parallax2D" unique_id=1220142225]
+position = Vector2(19464, 1779)
+scale = Vector2(180.67769, 7.46)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304250" type="Sprite2D" parent="Parallax2D" unique_id=1315983792]
+position = Vector2(7415.0005, 616)
+scale = Vector2(0.3181818, 0.312)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304251" type="Sprite2D" parent="Parallax2D" unique_id=121963392]
+position = Vector2(5428.0005, 629)
+scale = Vector2(0.33471075, 0.44800013)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304267" type="Sprite2D" parent="Parallax2D" unique_id=2069390420]
+position = Vector2(-515.00006, 656)
+scale = Vector2(1.791322, 0.7440002)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304268" type="Sprite2D" parent="Parallax2D" unique_id=716137979]
+position = Vector2(1419, 629)
+scale = Vector2(1.791322, 0.7440002)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304269" type="Sprite2D" parent="Parallax2D" unique_id=511360473]
+position = Vector2(9358, 629)
+scale = Vector2(1.791322, 0.7440002)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304270" type="Sprite2D" parent="Parallax2D" unique_id=1336899313]
+position = Vector2(15314, 647.00006)
+scale = Vector2(1.791322, 0.7440002)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304271" type="Sprite2D" parent="Parallax2D" unique_id=1142719182]
+position = Vector2(17422, 617)
+scale = Vector2(1.791322, 0.7440002)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304252" type="Sprite2D" parent="Parallax2D" unique_id=1345723127]
+position = Vector2(3426, 643)
+scale = Vector2(0.35124016, 0.396)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304253" type="Sprite2D" parent="Parallax2D" unique_id=764767363]
+position = Vector2(11365.5, 668.5)
+scale = Vector2(0.59091043, 1.02)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304254" type="Sprite2D" parent="Parallax2D" unique_id=1924502395]
+position = Vector2(13336, 656)
+scale = Vector2(0.5743738, 0.55199975)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304255" type="Sprite2D" parent="Parallax2D" unique_id=1445854368]
+position = Vector2(19321.002, 599)
+scale = Vector2(0.5289256, 0.45199993)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304256" type="Sprite2D" parent="Parallax2D" unique_id=356482441]
+position = Vector2(21275, 603)
+scale = Vector2(0.47107437, 0.428)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304257" type="Sprite2D" parent="Parallax2D" unique_id=1581813083]
+position = Vector2(23271, 610.00006)
+scale = Vector2(0.49792683, 0.54199994)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304258" type="Sprite2D" parent="Parallax2D" unique_id=121008213]
+position = Vector2(25257, 624)
+scale = Vector2(0.5123967, 0.588)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304259" type="Sprite2D" parent="Parallax2D" unique_id=357520900]
+position = Vector2(27259, 622)
+scale = Vector2(0.47107437, 0.644)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304260" type="Sprite2D" parent="Parallax2D" unique_id=1384529143]
+position = Vector2(29229.998, 613)
+scale = Vector2(0.57024795, 0.468)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304261" type="Sprite2D" parent="Parallax2D" unique_id=656594548]
+position = Vector2(31217.002, 609)
+scale = Vector2(0.49173555, 0.5)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304262" type="Sprite2D" parent="Parallax2D" unique_id=2143226043]
+position = Vector2(33192, 630)
+scale = Vector2(0.6446281, 0.696)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304263" type="Sprite2D" parent="Parallax2D" unique_id=979117591]
+position = Vector2(35179, 605.99994)
+scale = Vector2(0.553719, 0.576)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304264" type="Sprite2D" parent="Parallax2D" unique_id=2131812959]
+position = Vector2(37204, 651.00006)
+scale = Vector2(0.42561984, 0.532)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304265" type="Sprite2D" parent="Parallax2D" unique_id=1082948197]
+position = Vector2(39154, 585.99994)
+scale = Vector2(0.43801653, 0.488)
+texture = ExtResource("2_l6ibx")
+
+[node name="1791824304266" type="Sprite2D" parent="Parallax2D" unique_id=273833193]
+position = Vector2(41152, 606)
+scale = Vector2(0.5041322, 0.456)
+texture = ExtResource("2_l6ibx")
+
+[node name="Pathways" type="StaticBody2D" parent="." unique_id=1212506884]
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Pathways" unique_id=637863505]
+polygon = PackedVector2Array(10796, 189, 11732, 189, 12029, 183, 12333, 289, 12394, 316, 12521, 301, 12537, 341, 12421, 395, 12257, 401, 11978, 322, 11613, 341, 11343, 368, 11063, 371, 10835, 310)
+
+[node name="1791824325804" type="Sprite2D" parent="Pathways" unique_id=756107936]
+position = Vector2(36303, 518)
+scale = Vector2(0.4153439, 1)
+texture = ExtResource("3_fnhb3")
+
+[node name="149810" type="Sprite2D" parent="Pathways" unique_id=1204004711]
+position = Vector2(11668.001, 326.00003)
+scale = Vector2(2.0784798, 1.5841924)
+texture = ExtResource("4_eyba8")
+
+[node name="149816" type="Sprite2D" parent="Pathways" unique_id=764676806]
+position = Vector2(15325.999, 655)
+scale = Vector2(2.3370538, 2.2760224)
+texture = ExtResource("5_ola45")
+
+[node name="149803" type="Sprite2D" parent="Pathways" unique_id=286428508]
+position = Vector2(18847, 265.50003)
+scale = Vector2(1.7194767, 1.2877605)
+texture = ExtResource("6_nw5cv")
+
+[node name="149812" type="Sprite2D" parent="Pathways" unique_id=1681739340]
+position = Vector2(22348, 66)
+texture = ExtResource("4_eyba8")
+
+[node name="149813" type="Sprite2D" parent="Pathways" unique_id=1176839869]
+position = Vector2(20950, 49)
+texture = ExtResource("4_eyba8")
+
+[node name="147733" type="Sprite2D" parent="Pathways" unique_id=903578740]
+position = Vector2(5868, 422)
+scale = Vector2(0.56177324, 0.625)
+texture = ExtResource("7_77vue")
+
+[node name="149814" type="Sprite2D" parent="Pathways" unique_id=1213696454]
+position = Vector2(17538, 82)
+texture = ExtResource("4_eyba8")
+
+[node name="149808" type="Sprite2D" parent="Pathways" unique_id=227381107]
+position = Vector2(23802, 263)
+texture = ExtResource("8_pw6re")
+
+[node name="pathsteep2" type="Sprite2D" parent="Pathways" unique_id=988706566]
+position = Vector2(2226, 511.00006)
+scale = Vector2(1.1984012, 1.0084635)
+texture = ExtResource("9_kcjm6")
+
+[node name="149802" type="Sprite2D" parent="Pathways" unique_id=1594525986]
+position = Vector2(24729, 310)
+texture = ExtResource("10_cvaq6")
+
+[node name="147734" type="Sprite2D" parent="Pathways" unique_id=784948044]
+position = Vector2(26642, 255)
+texture = ExtResource("11_xe8im")
+
+[node name="149815" type="Sprite2D" parent="Pathways" unique_id=286675966]
+position = Vector2(25679, 365)
+texture = ExtResource("12_22ma8")
+
+[node name="pathsteep" type="Sprite2D" parent="Pathways" unique_id=1963267032]
+position = Vector2(587, 518.00006)
+scale = Vector2(1.1984012, 1.0084635)
+texture = ExtResource("9_kcjm6")
+
+[node name="147732" type="Sprite2D" parent="Pathways" unique_id=2125592667]
+position = Vector2(28099, 207)
+scale = Vector2(1.0428779, 1.0859375)
+texture = ExtResource("11_xe8im")
+
+[node name="147731" type="Sprite2D" parent="Pathways" unique_id=476479324]
+position = Vector2(6855, 279)
+texture = ExtResource("11_xe8im")
+
+[node name="149804" type="Sprite2D" parent="Pathways" unique_id=401083318]
+position = Vector2(4124, 388)
+scale = Vector2(1.5588663, 1)
+texture = ExtResource("13_oaggd")
+
+[node name="149811" type="Sprite2D" parent="Pathways" unique_id=542332626]
+position = Vector2(5377, 466)
+texture = ExtResource("12_22ma8")
+
+[node name="147729" type="Sprite2D" parent="Pathways" unique_id=1542909965]
+position = Vector2(9110, 320.5)
+scale = Vector2(2.2441869, 1.0481771)
+texture = ExtResource("14_ary44")
+
+[node name="1791824325803" type="Sprite2D" parent="Pathways" unique_id=681716483]
+position = Vector2(10420.75, 602)
+scale = Vector2(1.3888888, 0.59302324)
+texture = ExtResource("3_fnhb3")
+
+[node name="149801" type="Sprite2D" parent="Pathways" unique_id=1988500178]
+position = Vector2(20892.5, 322)
+scale = Vector2(1.2536337, 0.984375)
+texture = ExtResource("15_6i1qe")
+
+[node name="149807" type="Sprite2D" parent="Pathways" unique_id=2125946011]
+position = Vector2(17010, 447)
+scale = Vector2(1.8255814, 1)
+texture = ExtResource("8_pw6re")
+
+[node name="149800" type="Sprite2D" parent="Pathways" unique_id=1594456623]
+position = Vector2(22425, 313)
+texture = ExtResource("9_kcjm6")
+
+[node name="149805" type="Sprite2D" parent="Pathways" unique_id=236365130]
+position = Vector2(13733.001, 395)
+scale = Vector2(1.556686, 1.2942709)
+texture = ExtResource("13_oaggd")
+
+[node name="149817" type="Sprite2D" parent="Pathways" unique_id=985002919]
+position = Vector2(29284.998, 467)
+scale = Vector2(2.471679, 2.3846154)
+texture = ExtResource("12_22ma8")
+
+[node name="149818" type="Sprite2D" parent="Pathways" unique_id=1238016945]
+position = Vector2(30204, 407.99997)
+scale = Vector2(2.471679, 2.3846154)
+texture = ExtResource("12_22ma8")
+
+[node name="149819" type="Sprite2D" parent="Pathways" unique_id=2067030348]
+position = Vector2(31131, 364)
+scale = Vector2(2.471679, 2.3846154)
+texture = ExtResource("12_22ma8")
+
+[node name="149806" type="Sprite2D" parent="Pathways" unique_id=274734186]
+position = Vector2(32640.5, 360)
+scale = Vector2(1.400436, 1.0911459)
+texture = ExtResource("6_nw5cv")
+
+[node name="149809" type="Sprite2D" parent="Pathways" unique_id=1574923231]
+position = Vector2(34298, 310)
+texture = ExtResource("9_kcjm6")
+
+[node name="149820" type="Sprite2D" parent="Pathways" unique_id=1911920814]
+position = Vector2(35663, 328)
+texture = ExtResource("9_kcjm6")
+
+[node name="149821" type="Sprite2D" parent="Pathways" unique_id=25276541]
+position = Vector2(37005, 351)
+texture = ExtResource("15_6i1qe")
+
+[node name="149822" type="Sprite2D" parent="Pathways" unique_id=1096020216]
+position = Vector2(38378, 266)
+texture = ExtResource("10_cvaq6")
+
+[node name="147735" type="Sprite2D" parent="Pathways" unique_id=1902705532]
+position = Vector2(39643, 412)
+texture = ExtResource("7_77vue")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pathways" unique_id=1415890706]
+polygon = PackedVector2Array(-237, 414, -27, 419, 212, 530, 386, 539, 462, 511, 862, 517, 1036, 445, 1096, 418, 1291, 430, 1585, 418, 1847, 530, 1929, 542, 2038, 539, 2117, 512, 2339, 524, 2500, 515, 2728, 433, 2974, 418, 3135, 421, 3378, 406, 3560, 400, 3549, 354, 3691, 343, 4056, 160, 4635, 165, 4638, 255, 4727, 258, 4728, 317, 4704, 346, 4701, 359, 4748, 416, 4766, 429, 4821, 430, 4895, 432, 4916, 435, 4912, 453, 4905, 470, 4912, 487, 4917, 501, 4927, 501, 4948, 506, 5000, 507, 5045, 508, 5089, 507, 5131, 510, 5160, 512, 5169, 529, 5156, 552, 5156, 576, 5097, 589, 5054, 604, 4985, 602, 4915, 629, 4853, 633, 3055, 713, 2256, 832, 1422, 747, 603, 825, -227, 759)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Pathways" unique_id=1276320949]
+polygon = PackedVector2Array(7576, 475, 8117, 478, 8460, 126, 8739, 120, 9277, 406, 9540, 489, 9895, 461, 10171, 370, 10624, 381, 10655, 387, 10649, 721, 7570, 733)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Pathways" unique_id=2001627796]
+polygon = PackedVector2Array(12671, 416, 13172, 423, 13172, 365, 13294, 355, 13670, 101, 14205, 102, 14246, 111, 14240, 144, 14241, 218, 14244, 237, 14328, 237, 14328, 302, 14309, 337, 14311, 377, 14345, 424, 14358, 435, 14368, 452, 14503, 454, 14520, 456, 14516, 493, 14521, 535, 14531, 550, 14738, 550, 14777, 559, 14777, 587, 14755, 648, 14618, 710, 12671, 803)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Pathways" unique_id=1817597048]
+polygon = PackedVector2Array(15056, 492, 15114, 488, 15178, 526, 15221, 526, 15289, 527, 15346, 535, 15391, 510, 15453, 500, 15554, 504, 15601, 527, 15585, 564, 15576, 615, 15548, 660, 15511, 691, 15440, 706, 15376, 726, 15313, 733, 15261, 748, 15199, 721, 15155, 697, 15097, 671, 15060, 625, 15018, 564, 15009, 527, 15023, 506)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Pathways" unique_id=176788598]
+polygon = PackedVector2Array(15759, 389, 17001, 405, 17478, 401, 17459, 505, 17442, 580, 17432, 631, 17440, 678, 17448, 730, 17434, 761, 17169, 647, 17166, 672, 16879, 536, 16371, 538, 16165, 510, 16007, 546, 15822, 494, 15761, 515)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Pathways" unique_id=1349577026]
+polygon = PackedVector2Array(17127, -12, 17708, -2, 17889, 71, 17953, 69, 17931, 105, 17844, 115, 17776, 86, 17689, 69, 17616, 37, 17459, 49, 17410, 86, 17303, 66, 17240, 73, 17156, 75)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Pathways" unique_id=133343549]
+polygon = PackedVector2Array(17678, 430, 18419, 428, 18455, 389, 18458, 365, 18445, 355, 18681, 338, 18701, 296, 18687, 279, 18897, 265, 18897, 238, 18919, 220, 18916, 197, 19147, 187, 19141, 162, 19180, 147, 19168, 125, 19555, 112, 20191, 94, 20300, 116, 20411, 170, 20500, 191, 20494, 329, 20494, 376, 20592, 421, 20656, 440, 20775, 432, 20833, 432, 20909, 436, 20962, 436, 21049, 380, 21122, 353, 21171, 331, 21416, 229, 21599, 229, 21803, 215, 21903, 227, 22114, 334, 22263, 348, 22333, 319, 22666, 317, 22844, 219, 23191, 221, 23496, 214, 24211, 219, 24389, 315, 24433, 336, 24519, 332, 24576, 389, 24616, 421, 24736, 417, 24821, 395, 24895, 351, 24968, 300, 25051, 274, 25110, 244, 25157, 219, 25242, 219, 25370, 223, 25427, 232, 25417, 493, 24753, 630, 22449, 628, 21736, 549, 20925, 640, 20039, 545, 17666, 596)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Pathways" unique_id=515777405]
+polygon = PackedVector2Array(3313, 213, 3341, 197, 3406, 196, 3447, 201, 3529, 199, 3569, 202, 3563, 227, 3528, 256, 3498, 277, 3481, 278, 3428, 299, 3376, 276, 3338, 270)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Pathways" unique_id=493805972]
+polygon = PackedVector2Array(4768, 175, 4792, 171, 4823, 170, 4845, 178, 4845, 185, 4835, 196, 4820, 198, 4815, 202, 4804, 207, 4793, 199, 4779, 198, 4766, 173)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Pathways" unique_id=1348641116]
+polygon = PackedVector2Array(4877, 123, 4889, 117, 4896, 117, 4903, 121, 4920, 112, 4935, 115, 4955, 124, 4939, 166, 4930, 163, 4921, 184, 4908, 161, 4898, 170, 4874, 131)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Pathways" unique_id=1149035919]
+polygon = PackedVector2Array(4983, 63, 4990, 55, 5008, 51, 5021, 54, 5037, 57, 5055, 57, 5064, 54, 5079, 54, 5087, 63, 5085, 75, 5029, 106, 5018, 125, 5005, 100, 4990, 87)
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Pathways" unique_id=1288614497]
+polygon = PackedVector2Array(5236, 449, 5279, 438, 5308, 445, 5348, 442, 5372, 447, 5397, 441, 5416, 443, 5435, 444, 5455, 441, 5477, 442, 5494, 443, 5516, 441, 5530, 450, 5532, 466, 5524, 488, 5499, 497, 5465, 494, 5436, 499, 5424, 512, 5412, 500, 5396, 507, 5371, 513, 5341, 516, 5311, 508, 5287, 500, 5293, 515, 5271, 499, 5243, 492, 5236, 475)
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Pathways" unique_id=434892908]
+polygon = PackedVector2Array(5626, 356, 5668, 356, 5738, 356, 5806, 357, 5862, 353, 5907, 340, 5955, 356, 6030, 360, 6104, 355, 6113, 395, 6099, 421, 6074, 431, 6050, 454, 6024, 464, 5996, 485, 5992, 535, 5974, 493, 5958, 505, 5904, 521, 5853, 600, 5748, 474, 5661, 441, 5623, 396, 5619, 370)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Pathways" unique_id=496255525]
+polygon = PackedVector2Array(6213, 246, 6303, 244, 6368, 244, 6410, 244, 6418, 266, 6383, 311, 6321, 427, 6207, 264)
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="Pathways" unique_id=1385547120]
+polygon = PackedVector2Array(6474, 138, 6612, 144, 6948, 144, 6960, 156, 6953, 180, 6905, 213, 6856, 237, 6831, 288, 6802, 275, 6737, 297, 6693, 361, 6616, 251, 6612, 270, 6466, 136, 6504, 196, 6477, 183, 6464, 135)
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="Pathways" unique_id=1856023757]
+polygon = PackedVector2Array(6855, 383, 7230, 388, 7236, 410, 7043, 619, 6867, 422)
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="Pathways" unique_id=1146633229]
+polygon = PackedVector2Array(7295, 317, 7317, 307, 7486, 315, 7500, 339, 7405, 472, 7350, 428, 7335, 371, 7300, 340)
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="Pathways" unique_id=736485145]
+polygon = PackedVector2Array(12924, 165, 12973, 155, 13034, 155, 13097, 158, 13158, 155, 13183, 162, 13183, 205, 13109, 245, 13063, 260, 13033, 290, 12962, 250, 12942, 250)
+
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="Pathways" unique_id=773873975]
+polygon = PackedVector2Array(14374, 121, 14382, 145, 14388, 154, 14409, 157, 14444, 140, 14447, 124)
+
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="Pathways" unique_id=2132203051]
+polygon = PackedVector2Array(14483, 56, 14527, 49, 14557, 50, 14559, 68, 14546, 106, 14530, 124, 14497, 100)
+
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="Pathways" unique_id=705653831]
+polygon = PackedVector2Array(14591, -26, 14622, -35, 14643, -27, 14691, -26, 14691, -16, 14629, 51, 14604, 20)
+
+[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="Pathways" unique_id=1796727854]
+polygon = PackedVector2Array(20537, -45, 21117, -46, 21275, 24, 21362, 29, 21338, 83, 21275, 87, 21217, 68, 21157, 56, 21089, 27, 21006, 14, 20943, 52, 20831, 60, 20684, 47, 20561, 31, 20540, 3)
+
+[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="Pathways" unique_id=1408612769]
+polygon = PackedVector2Array(21927, -33, 21939, 39, 22012, 61, 22052, 67, 22123, 57, 22182, 65, 22272, 57, 22367, 54, 22425, 23, 22518, 54, 22599, 78, 22699, 91, 22767, 61, 22604, 22, 22514, -18, 22416, -14)
+
+[node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="Pathways" unique_id=1164336992]
+polygon = PackedVector2Array(24431, 108, 24431, 130, 24452, 154, 24474, 163, 24539, 175, 24625, 173, 24726, 169, 24953, 164, 25102, 91, 25237, 55, 25285, 29, 25123, 20, 24958, 115, 24481, 128)
+
+[node name="CollisionPolygon2D26" type="CollisionPolygon2D" parent="Pathways" unique_id=1824324796]
+polygon = PackedVector2Array(25538, 348, 25576, 343, 25619, 345, 25673, 348, 25752, 349, 25821, 346, 25829, 368, 25822, 385, 25804, 396, 25768, 396, 25719, 399, 25685, 402, 25651, 413, 25624, 409, 25574, 394, 25546, 382)
+
+[node name="CollisionPolygon2D27" type="CollisionPolygon2D" parent="Pathways" unique_id=545952780]
+polygon = PackedVector2Array(25999, 222, 26200, 220, 26194, 263, 26162, 292, 26148, 308, 26124, 337, 26120, 367, 26107, 399, 26088, 375, 26083, 353, 26070, 332, 26050, 306, 26032, 294, 25999, 248)
+
+[node name="CollisionPolygon2D28" type="CollisionPolygon2D" parent="Pathways" unique_id=1141645754]
+polygon = PackedVector2Array(26272, 127, 26419, 129, 26581, 126, 26742, 123, 26738, 149, 26695, 181, 26651, 212, 26614, 254, 26583, 236, 26512, 273, 26484, 336, 26438, 247, 26389, 228, 26332, 199, 26275, 171)
+
+[node name="CollisionPolygon2D29" type="CollisionPolygon2D" parent="Pathways" unique_id=420620706]
+polygon = PackedVector2Array(26656, 366, 26816, 370, 26918, 362, 27010, 363, 27017, 386, 26965, 439, 26835, 585, 26655, 397)
+
+[node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="Pathways" unique_id=543959095]
+polygon = PackedVector2Array(27091, 283, 27207, 289, 27272, 280, 27280, 296, 27190, 445, 27115, 352, 27087, 310)
+
+[node name="CollisionPolygon2D31" type="CollisionPolygon2D" parent="Pathways" unique_id=138000412]
+polygon = PackedVector2Array(27431, 171, 27528, 172, 27600, 175, 27645, 177, 27637, 208, 27567, 274, 27540, 364, 27484, 257, 27420, 199)
+
+[node name="CollisionPolygon2D32" type="CollisionPolygon2D" parent="Pathways" unique_id=1131456922]
+polygon = PackedVector2Array(27704, 63, 27944, 71, 28141, 74, 28200, 70, 28194, 112, 28128, 149, 28095, 167, 28074, 209, 28055, 192, 28016, 200, 27969, 230, 27935, 294, 27888, 202, 27849, 183, 27790, 150, 27751, 133, 27718, 108)
+
+[node name="CollisionPolygon2D33" type="CollisionPolygon2D" parent="Pathways" unique_id=726826731]
+polygon = PackedVector2Array(28109, 322, 28176, 325, 28237, 325, 28350, 329, 28471, 322, 28484, 346, 28442, 403, 28386, 437, 28358, 520, 28309, 482, 28297, 567, 28226, 431, 28101, 357)
+
+[node name="CollisionPolygon2D34" type="CollisionPolygon2D" parent="Pathways" unique_id=107514258]
+polygon = PackedVector2Array(28570, 244, 28668, 250, 28757, 243, 28767, 268, 28698, 347, 28669, 414, 28627, 337, 28596, 319)
+
+[node name="CollisionPolygon2D35" type="CollisionPolygon2D" parent="Pathways" unique_id=432006300]
+polygon = PackedVector2Array(28949, 436, 29215, 441, 29544, 431, 29642, 418, 29652, 463, 29632, 529, 29536, 544, 29215, 594, 28941, 513)
+
+[node name="CollisionPolygon2D36" type="CollisionPolygon2D" parent="Pathways" unique_id=682835051]
+polygon = PackedVector2Array(29868, 389, 30025, 366, 30238, 378, 30556, 369, 30572, 402, 30539, 477, 30144, 527, 29954, 485, 29876, 455)
+
+[node name="CollisionPolygon2D37" type="CollisionPolygon2D" parent="Pathways" unique_id=434474232]
+polygon = PackedVector2Array(30778, 328, 30975, 338, 31211, 322, 31479, 309, 31502, 370, 31481, 415, 31379, 428, 31288, 444, 31155, 461, 30964, 446, 30821, 424, 30769, 372)
+
+[node name="CollisionPolygon2D38" type="CollisionPolygon2D" parent="Pathways" unique_id=937685752]
+polygon = PackedVector2Array(31689, 498, 32301, 505, 32301, 479, 32324, 461, 32325, 438, 32357, 427, 32499, 423, 32526, 392, 32515, 374, 32538, 361, 32668, 359, 32709, 316, 32689, 307, 32720, 292, 32869, 295, 32881, 266, 32905, 252, 32884, 240, 32916, 229, 33023, 218, 33644, 214, 33783, 214, 33986, 331, 34134, 334, 34195, 303, 34531, 305, 34711, 215, 34969, 220, 35067, 232, 35147, 237, 35352, 344, 35485, 354, 35564, 324, 35896, 323, 36083, 231, 36316, 231, 36318, 102, 36459, 109, 36689, 219, 36699, 360, 36697, 410, 36791, 457, 36921, 459, 37052, 460, 37209, 358, 37400, 270, 37473, 253, 37689, 256, 37690, 161, 37777, 165, 37868, 173, 38032, 265, 38076, 284, 38175, 289, 38205, 322, 38264, 374, 38429, 367, 38589, 274, 38798, 171, 39059, 173, 39060, 455, 38393, 580, 37685, 540, 37019, 669, 36308, 594, 35679, 631, 34985, 545, 34301, 604, 33639, 529, 31717, 643, 31681, 639)
+
+[node name="CollisionPolygon2D39" type="CollisionPolygon2D" parent="Pathways" unique_id=173666598]
+polygon = PackedVector2Array(38091, 74, 38591, 70, 38790, -29, 38925, -31, 38930, -6, 38910, 17, 38812, 25, 38748, 37, 38641, 106, 38546, 127, 38362, 125, 38215, 132, 38140, 132, 38112, 130, 38083, 100)
+
+[node name="CollisionPolygon2D40" type="CollisionPolygon2D" parent="Pathways" unique_id=2142019684]
+polygon = PackedVector2Array(39215, 320, 39554, 320, 39727, 283, 39820, 320, 40053, 302, 40093, 341, 40048, 411, 39925, 470, 39856, 593, 39810, 550, 39616, 725, 39434, 495, 39280, 447, 39203, 368, 39230, 312)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=53315658]
+y_sort_enabled = true
+script = ExtResource("16_aecoh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=25952698]
+position = Vector2(-31, 378)
+scale = Vector2(0.19190101, 0.20214845)
+sprite_frames = SubResource("SpriteFrames_bwyvv")
+animation = &"jump_left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=504026780]
+position = Vector2(-24, 375)
+shape = SubResource("CapsuleShape2D_d6w64")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=385613106]
+position = Vector2(-19, 374)
+
+[node name="AttackArea" type="Area2D" parent="Player" unique_id=347775261]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea" unique_id=1510993523]
+position = Vector2(-22, 340)
+shape = SubResource("RectangleShape2D_vmcuh")
+debug_color = Color(0.7961066, 0.37936485, 0.5082315, 0.41960785)
+
+[node name="SpellArea" type="Area2D" parent="Player" unique_id=1006396213]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/SpellArea" unique_id=1619949455]
+position = Vector2(-12, 341)
+shape = SubResource("RectangleShape2D_iwseq")
+debug_color = Color(0.69831973, 0.49294108, 0.056531973, 0.41960785)
+
+[node name="VoidArea" type="Area2D" parent="." unique_id=2007633309]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VoidArea" unique_id=464155690]
+position = Vector2(19459.5, 799)
+shape = SubResource("RectangleShape2D_y5om2")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1621053361]
+
+[node name="Heart_Container" type="HBoxContainer" parent="UI" unique_id=1048856881]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -174.5
+offset_right = 174.5
+offset_bottom = 73.0
+grow_horizontal = 2
+
+[node name="Heart1" type="TextureRect" parent="UI/Heart_Container" unique_id=723250486]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("41_l6ibx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart2" type="TextureRect" parent="UI/Heart_Container" unique_id=2068812105]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("41_l6ibx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart3" type="TextureRect" parent="UI/Heart_Container" unique_id=526176937]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("41_l6ibx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart4" type="TextureRect" parent="UI/Heart_Container" unique_id=1663394964]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("41_l6ibx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart5" type="TextureRect" parent="UI/Heart_Container" unique_id=2119888457]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("41_l6ibx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Nxt2" type="Area2D" parent="." unique_id=899776703]
+position = Vector2(11422, 351)
+script = SubResource("GDScript_l6ibx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nxt2" unique_id=1226666218]
+position = Vector2(29153, -399)
+shape = SubResource("RectangleShape2D_fnhb3")
+
+[connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]
+[connection signal="body_entered" from="Nxt2" to="Player" method="_on_nxt_2_body_entered"]

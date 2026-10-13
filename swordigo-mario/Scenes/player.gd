@@ -176,3 +176,17 @@ func update_heart_ui():
 			heartNode.texture = halfHeart
 		else:
 			heartNode.texture = emptyHeart
+
+
+
+@export var nxt_scene:String = "res://Scenes/p_b_2.tscn"
+@export var nxt_scene2:String = "res://Scenes/p_b_3.tscn"
+
+func _on_nxt_body_entered(body):
+	if body.name == "Player":
+		get_tree().change_scene_to_file.call_deferred(nxt_scene)
+
+
+func _on_nxt_2_body_entered(body):
+	if body.name == "Player":
+		get_tree().change_scene_to_file.call_deferred(nxt_scene2)

@@ -43,16 +43,16 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("4_h4fq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h4fq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h4fq3")
+}, {
+"duration": 1.0,
 "texture": ExtResource("3_cfpli")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_h4fq3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_h4fq3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_d7rkc")
 }],
 "loop": 1,
 "name": &"fall_left",
@@ -60,7 +60,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_4uk5m")
+"texture": ExtResource("7_2b45a")
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_2b45a")
@@ -131,7 +131,7 @@ animations = [{
 "texture": ExtResource("9_gpaah")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_d7rkc")
+"texture": ExtResource("9_gpaah")
 }],
 "loop": 1,
 "name": &"jump_left",
@@ -148,7 +148,7 @@ animations = [{
 "texture": ExtResource("10_hk3ad")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_4uk5m")
+"texture": ExtResource("10_hk3ad")
 }],
 "loop": 0,
 "name": &"jump_right",
@@ -225,8 +225,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anief"]
-radius = 31.0
-height = 128.0
+radius = 23.0
+height = 88.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_anief"]
 size = Vector2(130.5, 160)
@@ -242,6 +242,11 @@ size = Vector2(387, 254)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vty1q"]
 bg_color = Color(0.08839024, 0.012878674, 0.013571991, 1)
+
+[sub_resource type="GDScript" id="GDScript_vty1q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yklqw"]
+size = Vector2(1031, 1052)
 
 [node name="plain_biome" type="Node2D" unique_id=2000806389]
 y_sort_enabled = true
@@ -332,8 +337,33 @@ position = Vector2(11941.001, 664.625)
 scale = Vector2(0.3801677, 0.339)
 texture = ExtResource("2_vty1q")
 
+[node name="1791824304251" type="Sprite2D" parent="Parallax2D" unique_id=128415372]
+position = Vector2(1280, 653)
+scale = Vector2(0.6508266, 0.66674984)
+texture = ExtResource("2_vty1q")
+
+[node name="1791824304252" type="Sprite2D" parent="Parallax2D" unique_id=2089915209]
+position = Vector2(3405, 653.00006)
+scale = Vector2(0.6508266, 0.66674984)
+texture = ExtResource("2_vty1q")
+
+[node name="1791824304253" type="Sprite2D" parent="Parallax2D" unique_id=393998461]
+position = Vector2(5584, 650)
+scale = Vector2(0.6508266, 0.66674984)
+texture = ExtResource("2_vty1q")
+
+[node name="1791824304254" type="Sprite2D" parent="Parallax2D" unique_id=2066445656]
+position = Vector2(7686.0005, 643)
+scale = Vector2(0.6508266, 0.66674984)
+texture = ExtResource("2_vty1q")
+
+[node name="1791824304255" type="Sprite2D" parent="Parallax2D" unique_id=1783788067]
+position = Vector2(9808.001, 650.00006)
+scale = Vector2(0.6508266, 0.66674984)
+texture = ExtResource("2_vty1q")
+
 [node name="1791824304250" type="Sprite2D" parent="Parallax2D" unique_id=72906280]
-position = Vector2(5742.9995, 1138)
+position = Vector2(5974.0005, 1148)
 scale = Vector2(52.752064, 3.304)
 texture = ExtResource("2_vty1q")
 
@@ -345,11 +375,11 @@ script = ExtResource("3_hwl5u")
 position = Vector2(82, 337)
 scale = Vector2(0.19190101, 0.20214845)
 sprite_frames = SubResource("SpriteFrames_xc32a")
-animation = &"spell"
-frame_progress = 0.33037326
+animation = &"jump_left"
+frame_progress = 0.30347416
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1010513994]
-position = Vector2(87, 319)
+position = Vector2(90, 334)
 shape = SubResource("CapsuleShape2D_anief")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1892070650]
@@ -358,14 +388,14 @@ position = Vector2(88, 346)
 [node name="AttackArea" type="Area2D" parent="Player" unique_id=1305148165]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea" unique_id=11738436]
-position = Vector2(82.75, 286)
+position = Vector2(90, 297)
 shape = SubResource("RectangleShape2D_anief")
 debug_color = Color(0.7961066, 0.37936485, 0.5082315, 0.41960785)
 
 [node name="SpellArea" type="Area2D" parent="Player" unique_id=1675102292]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/SpellArea" unique_id=35129716]
-position = Vector2(85.75, 281)
+position = Vector2(96, 298)
 shape = SubResource("RectangleShape2D_obclv")
 debug_color = Color(0.69831973, 0.49294108, 0.056531973, 0.41960785)
 
@@ -441,9 +471,14 @@ texture = ExtResource("33_tsra0")
 position = Vector2(5733.5, 799)
 shape = SubResource("RectangleShape2D_xc32a")
 
-[node name="148000" type="Sprite2D" parent="." unique_id=1569745049]
+[node name="Portal" type="Sprite2D" parent="." unique_id=1569745049]
 position = Vector2(612, 395)
 scale = Vector2(0.22291669, 0.2215402)
+texture = ExtResource("24_cfpli")
+
+[node name="Portal2" type="Sprite2D" parent="." unique_id=1173909716]
+position = Vector2(10921, 339)
+scale = Vector2(0.2253133, 0.23172428)
 texture = ExtResource("24_cfpli")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1883491129]
@@ -507,7 +542,6 @@ position = Vector2(58.5, -35)
 shape = SubResource("RectangleShape2D_145gp")
 
 [node name="Textbox" type="PanelContainer" parent="Master" unique_id=388959861]
-visible = false
 z_index = 5
 y_sort_enabled = true
 offset_left = -124.0
@@ -537,4 +571,13 @@ texture = ExtResource("33_tsra0")
 position = Vector2(10449, 595)
 texture = ExtResource("33_tsra0")
 
+[node name="Nxt" type="Area2D" parent="." unique_id=154525534]
+position = Vector2(11422, 351)
+script = SubResource("GDScript_vty1q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nxt" unique_id=895477691]
+position = Vector2(170.5, -183)
+shape = SubResource("RectangleShape2D_yklqw")
+
 [connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]
+[connection signal="body_entered" from="Nxt" to="Player" method="_on_nxt_body_entered"]
