@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://cda6sf1f05dde" path="res://Characters_img/148877.png" id="39_slt31"]
 [ext_resource type="Texture2D" uid="uid://bsd33gohddl1y" path="res://Characters_img/148878.png" id="40_yfa5r"]
 [ext_resource type="Texture2D" uid="uid://oy03tlfcab24" path="res://Obstacle_img/148001.png" id="41_l6ibx"]
+[ext_resource type="Texture2D" uid="uid://wnfjll11ly1v" path="res://Obstacle_img/148000.png" id="42_fnhb3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bwyvv"]
 animations = [{
@@ -232,10 +233,10 @@ radius = 27.0
 height = 86.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vmcuh"]
-size = Vector2(130.5, 160)
+size = Vector2(152.25, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iwseq"]
-size = Vector2(152.5, 155)
+size = Vector2(151.25, 155)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y5om2"]
 size = Vector2(43699, 166)
@@ -833,14 +834,14 @@ position = Vector2(-19, 374)
 [node name="AttackArea" type="Area2D" parent="Player" unique_id=347775261]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea" unique_id=1510993523]
-position = Vector2(-22, 340)
+position = Vector2(-26, 340)
 shape = SubResource("RectangleShape2D_vmcuh")
 debug_color = Color(0.7961066, 0.37936485, 0.5082315, 0.41960785)
 
 [node name="SpellArea" type="Area2D" parent="Player" unique_id=1006396213]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/SpellArea" unique_id=1619949455]
-position = Vector2(-12, 341)
+position = Vector2(-26, 340)
 shape = SubResource("RectangleShape2D_iwseq")
 debug_color = Color(0.69831973, 0.49294108, 0.056531973, 0.41960785)
 
@@ -903,6 +904,16 @@ script = SubResource("GDScript_l6ibx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Nxt2" unique_id=1226666218]
 position = Vector2(29153, -399)
 shape = SubResource("RectangleShape2D_fnhb3")
+
+[node name="148000" type="Sprite2D" parent="." unique_id=884272154]
+position = Vector2(39549.004, 186)
+scale = Vector2(0.33583334, 0.33705357)
+texture = ExtResource("42_fnhb3")
+
+[node name="148001" type="Sprite2D" parent="." unique_id=1788190804]
+position = Vector2(595, 441)
+scale = Vector2(0.17666668, 0.18694189)
+texture = ExtResource("42_fnhb3")
 
 [connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]
 [connection signal="body_entered" from="Nxt2" to="Player" method="_on_nxt_2_body_entered"]

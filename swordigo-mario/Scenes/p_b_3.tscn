@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dldc1rxqx4fxi" path="res://1791296263598.png" id="1_xlkg3"]
 [ext_resource type="Texture2D" uid="uid://348bpvrhree1" path="res://Obstacle_img/1791824325803.png" id="2_jvtxd"]
+[ext_resource type="Texture2D" uid="uid://wnfjll11ly1v" path="res://Obstacle_img/148000.png" id="3_jvtxd"]
 [ext_resource type="Texture2D" uid="uid://dy71unm2wuh2n" path="res://Obstacle_img/149785.png" id="3_o5dlb"]
 [ext_resource type="Texture2D" uid="uid://d0fjtbbv5cabi" path="res://Obstacle_img/149790.png" id="4_vhf14"]
 [ext_resource type="Texture2D" uid="uid://cvmlxuhwi52ie" path="res://Obstacle_img/149788.png" id="5_72xyq"]
@@ -232,13 +233,13 @@ radius = 27.0
 height = 86.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4a3x"]
-size = Vector2(130.5, 160)
+size = Vector2(157.25, 155)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ud7rw"]
 size = Vector2(152.5, 155)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xh2t"]
-size = Vector2(44152.5, 166)
+size = Vector2(51599, 219)
 
 [node name="p_b_3" type="Node2D" unique_id=1502328220]
 
@@ -254,10 +255,10 @@ texture = ExtResource("1_xlkg3")
 expand_mode = 1
 
 [node name="BG24" type="TextureRect" parent="Parallax2D" unique_id=1783941685]
-offset_left = -2921.0
-offset_top = -531.0
-offset_right = -409.0
-offset_bottom = 948.0
+offset_left = -2877.0
+offset_top = -536.0
+offset_right = -365.0
+offset_bottom = 943.0
 texture = ExtResource("1_xlkg3")
 expand_mode = 1
 
@@ -429,6 +430,14 @@ offset_bottom = 1019.0
 texture = ExtResource("1_xlkg3")
 expand_mode = 1
 
+[node name="BG25" type="TextureRect" parent="Parallax2D" unique_id=1925659796]
+offset_left = 45037.0
+offset_top = -407.0
+offset_right = 48741.0
+offset_bottom = 1553.0
+texture = ExtResource("1_xlkg3")
+expand_mode = 1
+
 [node name="BG23" type="TextureRect" parent="Parallax2D" unique_id=110757064]
 offset_left = 41174.0
 offset_top = -409.0
@@ -438,8 +447,8 @@ texture = ExtResource("1_xlkg3")
 expand_mode = 1
 
 [node name="1791824325803" type="Sprite2D" parent="Parallax2D" unique_id=1936609816]
-position = Vector2(21043.498, 3084)
-scale = Vector2(253.52907, 24.651161)
+position = Vector2(22907.504, 3084)
+scale = Vector2(273.254, 24.651161)
 texture = ExtResource("2_jvtxd")
 
 [node name="Panel" type="Panel" parent="Parallax2D" unique_id=1899600081]
@@ -588,6 +597,15 @@ offset_top = 788.0
 offset_right = 41100.0
 offset_bottom = 887.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_anief")
+
+[node name="148000" type="Sprite2D" parent="Parallax2D" unique_id=825273844]
+position = Vector2(520, 438)
+scale = Vector2(0.25333333, 0.2611607)
+texture = ExtResource("3_jvtxd")
+
+[node name="148001" type="Sprite2D" parent="Parallax2D" unique_id=43927848]
+position = Vector2(43283, 162)
+texture = ExtResource("3_jvtxd")
 
 [node name="pathways" type="StaticBody2D" parent="." unique_id=1738408903]
 
@@ -862,6 +880,14 @@ polygon = PackedVector2Array(39446, 274, 40442, 274, 40799, 157, 41092, 160, 410
 [node name="CollisionPolygon2D43" type="CollisionPolygon2D" parent="pathways" unique_id=536239172]
 polygon = PackedVector2Array(41321, 399, 41641, 399, 41732, 413, 42027, 545, 42166, 625, 42255, 664, 42323, 710, 42431, 726, 42570, 739, 44018, 740, 44282, 733, 44466, 660, 44994, 656, 44991, 897, 43197, 1271, 41867, 728, 41324, 586)
 
+[node name="149813" type="Sprite2D" parent="pathways" unique_id=476722736]
+position = Vector2(45438, -136)
+scale = Vector2(1.9563954, 2.029948)
+texture = ExtResource("4_vhf14")
+
+[node name="CollisionPolygon2D44" type="CollisionPolygon2D" parent="pathways" unique_id=1664058791]
+polygon = PackedVector2Array(44960, -238, 44994, 537, 45600, 46, 45939, -61, 46541, 35, 46757, -56, 46784, -261)
+
 [node name="Player" type="CharacterBody2D" parent="." unique_id=286678687]
 y_sort_enabled = true
 script = ExtResource("13_d2adr")
@@ -882,7 +908,7 @@ position = Vector2(-140, 408)
 [node name="AttackArea" type="Area2D" parent="Player" unique_id=1857109070]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea" unique_id=1255397307]
-position = Vector2(-158, 364)
+position = Vector2(-145, 376)
 shape = SubResource("RectangleShape2D_r4a3x")
 debug_color = Color(0.7961066, 0.37936485, 0.5082315, 0.41960785)
 
@@ -896,7 +922,7 @@ debug_color = Color(0.69831973, 0.49294108, 0.056531973, 0.41960785)
 [node name="VoidArea" type="Area2D" parent="." unique_id=455725060]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VoidArea" unique_id=1692189464]
-position = Vector2(19233.25, 899)
+position = Vector2(22956.5, 970.5)
 shape = SubResource("RectangleShape2D_1xh2t")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1271411160]

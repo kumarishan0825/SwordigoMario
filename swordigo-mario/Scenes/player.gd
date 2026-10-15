@@ -181,6 +181,8 @@ func update_heart_ui():
 
 @export var nxt_scene:String = "res://Scenes/p_b_2.tscn"
 @export var nxt_scene2:String = "res://Scenes/p_b_3.tscn"
+@export var nxt_scene3:String = "res://Scenes/c_w_2.tscn"
+@export var nxt_scene4:String = "res://Scenes/c_w_3.tscn"
 
 func _on_nxt_body_entered(body):
 	if body.name == "Player":
@@ -190,3 +192,13 @@ func _on_nxt_body_entered(body):
 func _on_nxt_2_body_entered(body):
 	if body.name == "Player":
 		get_tree().change_scene_to_file.call_deferred(nxt_scene2)
+
+
+func _on_nxt_3_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		get_tree().change_scene_to_file.call_deferred(nxt_scene3) # Replace with function body.
+
+
+func _on_nxt_4_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		get_tree().change_scene_to_file.call_deferred(nxt_scene4) # Replace with function body.
