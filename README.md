@@ -1,7 +1,7 @@
 # SwordigoMario [BETA Version]
 ---
 ### Game Begins:-
-(_) SwordigoMario - Godot Engine 05-10-2026 14_48_18.png
+![Overall Clock]((_) SwordigoMario - Godot Engine 05-10-2026 14_48_18.png)
 ---
 ### Interface and UI :-
 c_w_2.tscn - SwordigoMario - Godot Engine 15-10-2026 13_30_53.png
