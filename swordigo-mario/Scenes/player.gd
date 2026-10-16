@@ -9,6 +9,7 @@ const FightDamage = 0.5
 const SpellDamage = 1.5
 @onready var attack_area: Area2D = $AttackArea
 @onready var spell_area: Area2D = $SpellArea
+var invincible = false
 
 var facing_direc = "right"
 var is_fighting = false
@@ -18,6 +19,7 @@ var hitBodies : Array = []
 
 var respawn_position: Vector2 = Vector2.ZERO
 func _ready():
+	add_to_group("player")
 	floor_constant_speed = true
 	floor_snap_length = 32.0
 	respawn_position = global_position
@@ -157,12 +159,35 @@ func take_damage(amount: float):
 	if currentHeart <= 0:
 		print("Game Over!")
 		currentHeart = maxHeart
-		get_tree().call_deferred("reload_current_scene")
+		call_deferred("die")
 		
 	else:
 		global_position = respawn_position
 		velocity = Vector2.ZERO
-		
+func hurt(amount: float, from_x: float):
+	if invincible:
+		return
+	invincible = true
+
+	currentHeart -= amount
+	if currentHeart < 0:
+		currentHeart = 0
+	update_heart_ui()
+
+	if currentHeart <= 0:
+		currentHeart = maxHeart
+		call_deferred("die")
+		return
+
+	# Small knockback away from the mob
+	velocity.x = sign(global_position.x - from_x) * 250
+	velocity.y = -250
+
+	# Blink while invincible for 1 second
+	animated_sprite_2d.modulate.a = 0.5
+	await get_tree().create_timer(1.0).timeout
+	animated_sprite_2d.modulate.a = 1.0
+	invincible = false		
 func update_heart_ui():
 	if not heartContainer: return
 	
@@ -179,10 +204,10 @@ func update_heart_ui():
 
 
 
-@export var nxt_scene:String = "res://Scenes/p_b_2.tscn"
-@export var nxt_scene2:String = "res://Scenes/p_b_3.tscn"
-@export var nxt_scene3:String = "res://Scenes/c_w_2.tscn"
-@export var nxt_scene4:String = "res://Scenes/c_w_3.tscn"
+@export var nxt_scene:String = "res://Scenes/win_stage.tscn"
+@export var nxt_scene2:String = "res://Scenes/win_stage_2.tscn"
+@export var nxt_scene3:String = "res://Scenes/win_stage_3.tscn"
+@export var nxt_scene4:String = "res://Scenes/win_stage_4.tscn"
 
 func _on_nxt_body_entered(body):
 	if body.name == "Player":
@@ -202,3 +227,19 @@ func _on_nxt_3_body_entered(body: Node2D) -> void:
 func _on_nxt_4_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		get_tree().change_scene_to_file.call_deferred(nxt_scene4) # Replace with function body.
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
+	
+@export var death_scene: PackedScene
+
+func die():
+	var tree = get_tree()
+	var old = tree.current_scene
+	var scene = load("res://Scenes/death_screen.tscn")
+	var d = scene.instantiate()
+	d.came_from = old.scene_file_path
+	tree.root.add_child(d)
+	tree.current_scene = d
+	old.queue_free()

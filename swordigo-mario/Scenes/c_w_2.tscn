@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dtqg2jfcrmw73" path="res://Obstacle_img/150587.png" id="10_sv1qm"]
 [ext_resource type="Texture2D" uid="uid://dpku8ssi87vmk" path="res://Obstacle_img/150592.png" id="11_8ukr8"]
 [ext_resource type="Script" uid="uid://clta5b8n833id" path="res://Scenes/player.gd" id="12_jc72o"]
+[ext_resource type="Texture2D" uid="uid://c5qly6crxhf3c" path="res://150187.png" id="12_ytmjr"]
 [ext_resource type="Texture2D" uid="uid://djthrji314a45" path="res://Characters_img/147707.png" id="13_ytmjr"]
 [ext_resource type="Texture2D" uid="uid://cbr0q8f6exk34" path="res://Characters_img/147687.png" id="14_ql8yr"]
 [ext_resource type="Texture2D" uid="uid://cgbkckhby1ghx" path="res://Characters_img/147703.png" id="15_fkjma"]
@@ -37,6 +38,14 @@
 [ext_resource type="Texture2D" uid="uid://cda6sf1f05dde" path="res://Characters_img/148877.png" id="35_50gyg"]
 [ext_resource type="Texture2D" uid="uid://bsd33gohddl1y" path="res://Characters_img/148878.png" id="36_57krc"]
 [ext_resource type="Texture2D" uid="uid://oy03tlfcab24" path="res://Obstacle_img/148001.png" id="37_owg2j"]
+[ext_resource type="Texture2D" uid="uid://wnfjll11ly1v" path="res://Obstacle_img/148000.png" id="39_ql8yr"]
+[ext_resource type="Texture2D" uid="uid://dakegyv72beoi" path="res://Characters_img/151134.png" id="40_3kwam"]
+[ext_resource type="Script" uid="uid://bvdfrcij3pwsk" path="res://Scenes/skull_boss.gd" id="40_sxnm6"]
+[ext_resource type="Texture2D" uid="uid://djlc2be5u74xt" path="res://Characters_img/151135.png" id="41_sxnm6"]
+[ext_resource type="Texture2D" uid="uid://c5ecur77f2okg" path="res://Characters_img/151136.png" id="42_r1djq"]
+[ext_resource type="Texture2D" uid="uid://b02jwmituwe7" path="res://Characters_img/151137.png" id="43_lb6yu"]
+[ext_resource type="Texture2D" uid="uid://bvsw142ntqg7x" path="res://Characters_img/151138.png" id="44_jx8rl"]
+[ext_resource type="Texture2D" uid="uid://gfmdr75h61yt" path="res://Characters_img/151139.png" id="45_hkakd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_anief"]
 bg_color = Color(0.13917911, 0.23457617, 0.31206462, 1)
@@ -250,6 +259,38 @@ size = Vector2(49309, 246)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vyrer"]
 size = Vector2(369, 157)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xc32a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_3kwam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_sxnm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_r1djq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_lb6yu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_jx8rl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_hkakd")
+}],
+"loop": 1,
+"name": &"jumptokill",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_anief"]
+size = Vector2(370, 351)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1djq"]
+size = Vector2(390, 373.25)
 
 [node name="c_w_2" type="Node2D" unique_id=1613139123]
 
@@ -1005,6 +1046,11 @@ polygon = PackedVector2Array(39361, 239, 39543, 249, 39736, 330, 39742, 517, 398
 [node name="CollisionPolygon2D32" type="CollisionPolygon2D" parent="Pathways" unique_id=942582414]
 polygon = PackedVector2Array(45312, -220, 46422, -215, 46415, 347, 45325, 787)
 
+[node name="150187" type="Sprite2D" parent="Pathways" unique_id=1603487654]
+position = Vector2(619, 263)
+scale = Vector2(0.57848835, 0.54557294)
+texture = ExtResource("12_ytmjr")
+
 [node name="Player" type="CharacterBody2D" parent="." unique_id=898826770]
 y_sort_enabled = true
 script = ExtResource("12_jc72o")
@@ -1082,6 +1128,14 @@ texture = ExtResource("37_owg2j")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Button" type="Button" parent="UI" unique_id=1088854806]
+offset_left = 20.0
+offset_top = 28.0
+offset_right = 161.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 26
+text = "Back....."
+
 [node name="VoidArea" type="Area2D" parent="." unique_id=1334283455]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VoidArea" unique_id=1283682922]
@@ -1095,5 +1149,37 @@ position = Vector2(46212, -2214)
 position = Vector2(-1079.5, 2909.5)
 shape = SubResource("RectangleShape2D_vyrer")
 
+[node name="148000" type="Sprite2D" parent="." unique_id=1415068763]
+position = Vector2(739, 514)
+scale = Vector2(0.2620833, 0.26729912)
+texture = ExtResource("39_ql8yr")
+
+[node name="148001" type="Sprite2D" parent="." unique_id=532164860]
+position = Vector2(44847, 248)
+scale = Vector2(0.2620833, 0.26729912)
+texture = ExtResource("39_ql8yr")
+
+[node name="SkullBoss" type="CharacterBody2D" parent="." unique_id=319945007]
+script = ExtResource("40_sxnm6")
+
+[node name="animskullboss" type="AnimatedSprite2D" parent="SkullBoss" unique_id=320633131]
+position = Vector2(43219, 189)
+scale = Vector2(0.19726697, 0.20166016)
+sprite_frames = SubResource("SpriteFrames_xc32a")
+animation = &"jumptokill"
+frame_progress = 0.4125079
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SkullBoss" unique_id=417862571]
+position = Vector2(43223, 187.5)
+shape = SubResource("RectangleShape2D_anief")
+
+[node name="DamageArea" type="Area2D" parent="SkullBoss" unique_id=913433399]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SkullBoss/DamageArea" unique_id=729298620]
+position = Vector2(43222, 177.625)
+shape = SubResource("RectangleShape2D_r1djq")
+debug_color = Color(0.7224464, 0, 0.056923494, 0.41960785)
+
+[connection signal="pressed" from="UI/Button" to="Player" method="_on_button_pressed"]
 [connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]
 [connection signal="body_entered" from="Nxt4" to="Player" method="_on_nxt_4_body_entered"]

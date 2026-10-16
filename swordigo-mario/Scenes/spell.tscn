@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cq7usrro3ftec"]
+
+[ext_resource type="Texture2D" uid="uid://2a8frf8073rn" path="res://Characters_img/151151.png" id="1_nx6qu"]
+[ext_resource type="Script" uid="uid://c0lalitxpb3ug" path="res://Scenes/spell.gd" id="1_xug6c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anief"]
+radius = 82.0
+height = 368.0
+
+[node name="Spell" type="Area2D" unique_id=691216979]
+script = ExtResource("1_xug6c")
+
+[node name="151151" type="Sprite2D" parent="." unique_id=852500131]
+position = Vector2(508.74997, 165.74997)
+scale = Vector2(0.17823406, 0.18912764)
+texture = ExtResource("1_nx6qu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=774169503]
+position = Vector2(494, 169)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_anief")

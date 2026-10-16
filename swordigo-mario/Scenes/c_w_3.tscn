@@ -37,6 +37,20 @@
 [ext_resource type="Texture2D" uid="uid://cda6sf1f05dde" path="res://Characters_img/148877.png" id="35_n2ubd"]
 [ext_resource type="Texture2D" uid="uid://bsd33gohddl1y" path="res://Characters_img/148878.png" id="36_tb671"]
 [ext_resource type="Texture2D" uid="uid://oy03tlfcab24" path="res://Obstacle_img/148001.png" id="37_1v1a1"]
+[ext_resource type="Texture2D" uid="uid://bocyu4dg05bhm" path="res://150188.png" id="38_vp1nc"]
+[ext_resource type="Texture2D" uid="uid://wnfjll11ly1v" path="res://Obstacle_img/148000.png" id="39_6kr48"]
+[ext_resource type="Script" uid="uid://ba3atm5fqyauk" path="res://Scenes/boss_buckle.gd" id="40_r53s3"]
+[ext_resource type="Texture2D" uid="uid://c8xv642t0ykdl" path="res://Characters_img/151144.png" id="40_um8e3"]
+[ext_resource type="Texture2D" uid="uid://c5kdof72v33p1" path="res://Characters_img/151145.png" id="41_r53s3"]
+[ext_resource type="Texture2D" uid="uid://7ppj5p0dpye1" path="res://Characters_img/151146.png" id="42_omwdk"]
+[ext_resource type="Texture2D" uid="uid://d2tvyw0e5dl4u" path="res://Characters_img/151147.png" id="43_rxxtc"]
+[ext_resource type="Texture2D" uid="uid://clir488rl0eur" path="res://Characters_img/151148.png" id="44_yvo4u"]
+[ext_resource type="Texture2D" uid="uid://cohluu10gof4b" path="res://Characters_img/151149.png" id="45_a23mh"]
+[ext_resource type="Texture2D" uid="uid://b677rvkdikhp1" path="res://Characters_img/151150.png" id="46_qmv1q"]
+[ext_resource type="Texture2D" uid="uid://dpfbsi3rps0hb" path="res://Characters_img/151140.png" id="47_owxxv"]
+[ext_resource type="Texture2D" uid="uid://crmopbqtwt4hy" path="res://Characters_img/151141.png" id="48_85l2u"]
+[ext_resource type="Texture2D" uid="uid://1brjd1ei0m6q" path="res://Characters_img/151142.png" id="49_4hsv6"]
+[ext_resource type="Texture2D" uid="uid://cilixsokvxqsa" path="res://Characters_img/151143.png" id="50_n2ubd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_anief"]
 bg_color = Color(0.07107987, 0.16065598, 0.18962598, 1)
@@ -244,6 +258,58 @@ size = Vector2(152.5, 155)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tu0u0"]
 size = Vector2(52646, 235)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_anief"]
+size = Vector2(306, 269)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xc32a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_um8e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_r53s3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_omwdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_rxxtc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_yvo4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_a23mh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_qmv1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_qmv1q")
+}],
+"loop": 1,
+"name": &"cast",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_owxxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_85l2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_4hsv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_n2ubd")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="c_w_3" type="Node2D" unique_id=1115530461]
 
@@ -1096,10 +1162,43 @@ texture = ExtResource("37_1v1a1")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Button" type="Button" parent="UI" unique_id=312788524]
+offset_left = 20.0
+offset_top = 28.0
+offset_right = 161.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 26
+text = "Back....."
+
 [node name="VoidArea" type="Area2D" parent="." unique_id=688189796]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VoidArea" unique_id=1603045103]
 position = Vector2(24411, 911.5)
 shape = SubResource("RectangleShape2D_tu0u0")
 
+[node name="148000" type="Sprite2D" parent="." unique_id=1846205452]
+position = Vector2(489.99997, 420)
+scale = Vector2(0.24374998, 0.25613838)
+texture = ExtResource("39_6kr48")
+
+[node name="150188" type="Sprite2D" parent="." unique_id=1246897843]
+position = Vector2(695, 194.00003)
+scale = Vector2(0.5377907, 0.4752604)
+texture = ExtResource("38_vp1nc")
+
+[node name="Boss Buckle" type="CharacterBody2D" parent="." unique_id=184324322]
+script = ExtResource("40_r53s3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Buckle" unique_id=2107403403]
+position = Vector2(48035, 290)
+shape = SubResource("RectangleShape2D_anief")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss Buckle" unique_id=1712354458]
+position = Vector2(48040, 303.00003)
+scale = Vector2(0.17163272, 0.15942377)
+sprite_frames = SubResource("SpriteFrames_xc32a")
+animation = &"walk"
+frame_progress = 0.32048264
+
+[connection signal="pressed" from="UI/Button" to="Player" method="_on_button_pressed"]
 [connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]

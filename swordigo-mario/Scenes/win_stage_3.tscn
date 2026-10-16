@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dv1r60cfwrnh8"]
+
+[ext_resource type="Script" uid="uid://b0h0e1plhfocs" path="res://Scenes/win_stage_3.gd" id="1_1bqua"]
+[ext_resource type="Texture2D" uid="uid://oy03tlfcab24" path="res://Obstacle_img/148001.png" id="1_j0eeq"]
+[ext_resource type="Texture2D" uid="uid://kda20rewejf" path="res://Characters_img/148017.png" id="2_1bqua"]
+
+[node name="win_stage3" type="Node2D" unique_id=1126128910]
+script = ExtResource("1_1bqua")
+
+[node name="Panel" type="Panel" parent="." unique_id=1391192936]
+offset_right = 1157.0
+offset_bottom = 652.0
+
+[node name="Label" type="Label" parent="." unique_id=1868977059]
+offset_left = 201.0
+offset_top = 91.0
+offset_right = 812.0
+offset_bottom = 259.0
+theme_override_font_sizes/font_size = 42
+text = "             Victory!!
+   Going to next stage"
+
+[node name="148001" type="Sprite2D" parent="." unique_id=10616136]
+position = Vector2(761.00006, 145)
+scale = Vector2(0.13333324, 0.12444197)
+texture = ExtResource("1_j0eeq")
+
+[node name="148017" type="Sprite2D" parent="." unique_id=986726475]
+position = Vector2(965, 395)
+scale = Vector2(0.18958333, 0.19810268)
+texture = ExtResource("2_1bqua")
+
+[node name="Button" type="Button" parent="." unique_id=835077563]
+offset_left = 95.0
+offset_top = 361.0
+offset_right = 328.0
+offset_bottom = 413.0
+text = "Back"
+
+[node name="Button2" type="Button" parent="." unique_id=735333866]
+offset_left = 444.0
+offset_top = 357.0
+offset_right = 677.0
+offset_bottom = 409.0
+text = "Next Stage
+"

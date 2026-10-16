@@ -42,6 +42,23 @@
 [ext_resource type="Texture2D" uid="uid://cda6sf1f05dde" path="res://Characters_img/148877.png" id="40_0347t"]
 [ext_resource type="Texture2D" uid="uid://bsd33gohddl1y" path="res://Characters_img/148878.png" id="41_bl1iu"]
 [ext_resource type="Texture2D" uid="uid://oy03tlfcab24" path="res://Obstacle_img/148001.png" id="42_qrbpl"]
+[ext_resource type="Texture2D" uid="uid://wnfjll11ly1v" path="res://Obstacle_img/148000.png" id="43_yvy33"]
+[ext_resource type="Texture2D" uid="uid://dt04hl4l8i5w6" path="res://Characters_img/151103.png" id="44_probh"]
+[ext_resource type="Script" uid="uid://c610lxtw1uweh" path="res://Scenes/knight.gd" id="44_tpgvj"]
+[ext_resource type="Texture2D" uid="uid://bphpn06xlpa6g" path="res://Characters_img/151114.png" id="45_tpgvj"]
+[ext_resource type="Texture2D" uid="uid://csovb3admw6x1" path="res://Characters_img/151113.png" id="46_d1hvu"]
+[ext_resource type="Texture2D" uid="uid://cwjv5wfwr8buc" path="res://Characters_img/151117.png" id="47_6jstr"]
+[ext_resource type="Texture2D" uid="uid://cp0hmwvj8c5nw" path="res://Characters_img/151097.png" id="48_locj4"]
+[ext_resource type="Texture2D" uid="uid://di6v234yo2ynr" path="res://Characters_img/151098.png" id="49_84h6u"]
+[ext_resource type="Texture2D" uid="uid://birhidsos5ot6" path="res://Characters_img/151101.png" id="50_n62rp"]
+[ext_resource type="Texture2D" uid="uid://dcqw4vh0srjbx" path="res://Characters_img/151102.png" id="51_6cpwq"]
+[ext_resource type="Script" uid="uid://drkm77m1c7rl4" path="res://Scenes/grass_hopper.gd" id="53_gbqje"]
+[ext_resource type="Texture2D" uid="uid://d1kgtn1k5yrmu" path="res://Characters_img/151073.png" id="54_ctvaw"]
+[ext_resource type="Texture2D" uid="uid://bg6yufgf4qdm7" path="res://Characters_img/151074.png" id="55_vmcek"]
+[ext_resource type="Texture2D" uid="uid://b44qr7ajow6u7" path="res://Characters_img/151075.png" id="56_3awyt"]
+[ext_resource type="Texture2D" uid="uid://dvrkem4ensv7s" path="res://Characters_img/151076.png" id="57_ycihg"]
+[ext_resource type="Texture2D" uid="uid://mmic252yy8gt" path="res://Characters_img/151078.png" id="58_0347t"]
+[ext_resource type="Texture2D" uid="uid://b4vlveargtobr" path="res://Characters_img/151079.png" id="59_bl1iu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_anief"]
 bg_color = Color(0.20171645, 0.30231544, 0, 1)
@@ -252,6 +269,81 @@ size = Vector2(51304, 219)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qrbpl"]
 size = Vector2(532.75, 1092)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_145gp"]
+radius = 136.34148
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_anief"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_probh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_tpgvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_d1hvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_6jstr")
+}],
+"loop": 1,
+"name": &"fight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_locj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_84h6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_n62rp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_6cpwq")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obclv"]
+size = Vector2(302, 292.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6e250"]
+size = Vector2(180, 103)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nptam"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_ctvaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_vmcek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_3awyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ycihg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_0347t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_bl1iu")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhfxs"]
+size = Vector2(288, 142)
 
 [node name="castle_wars" type="Node2D" unique_id=830681904]
 
@@ -1099,6 +1191,14 @@ texture = ExtResource("42_qrbpl")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Button" type="Button" parent="UI" unique_id=678594795]
+offset_left = 20.0
+offset_top = 28.0
+offset_right = 161.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 26
+text = "Back....."
+
 [node name="VoidArea" type="Area2D" parent="." unique_id=2045506989]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VoidArea" unique_id=459174033]
@@ -1112,5 +1212,104 @@ position = Vector2(46212, -2214)
 position = Vector2(2556.375, 2520)
 shape = SubResource("RectangleShape2D_qrbpl")
 
+[node name="148000" type="Sprite2D" parent="." unique_id=260402108]
+position = Vector2(48088, 539)
+scale = Vector2(0.28, 0.3125)
+texture = ExtResource("43_yvy33")
+
+[node name="148001" type="Sprite2D" parent="." unique_id=1348663526]
+position = Vector2(563.9922, 509)
+scale = Vector2(0.28, 0.3125)
+texture = ExtResource("43_yvy33")
+
+[node name="Knight" type="CharacterBody2D" parent="." unique_id=1030134812]
+z_index = 1
+script = ExtResource("44_tpgvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Knight" unique_id=1468919111]
+position = Vector2(47367, 321)
+shape = SubResource("CircleShape2D_145gp")
+
+[node name="animknight" type="AnimatedSprite2D" parent="Knight" unique_id=1545718903]
+position = Vector2(47363, 347)
+scale = Vector2(0.1462399, 0.1462402)
+sprite_frames = SubResource("SpriteFrames_anief")
+animation = &"walk"
+frame_progress = 0.6407794
+
+[node name="DamageArea" type="Area2D" parent="Knight" unique_id=870976522]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Knight/DamageArea" unique_id=1643481067]
+position = Vector2(47362, 308)
+shape = SubResource("RectangleShape2D_obclv")
+debug_color = Color(0.606796, 0.1890338, 0.20127743, 0.41960785)
+
+[node name="GrassHopper" type="CharacterBody2D" parent="." unique_id=23183698]
+z_index = 1
+position = Vector2(0, 160)
+script = ExtResource("53_gbqje")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassHopper" unique_id=794554031]
+position = Vector2(2133, 414.5)
+shape = SubResource("RectangleShape2D_6e250")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GrassHopper" unique_id=1677669677]
+position = Vector2(2135, 408.25)
+scale = Vector2(0.089965865, 0.07446289)
+sprite_frames = SubResource("SpriteFrames_nptam")
+animation = &"walk"
+
+[node name="DamageArea" type="Area2D" parent="GrassHopper" unique_id=1282079111]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassHopper/DamageArea" unique_id=1447650975]
+position = Vector2(2130, 389)
+shape = SubResource("RectangleShape2D_qhfxs")
+debug_color = Color(0.7224464, 0, 0.056923494, 0.41960785)
+
+[node name="GrassHopper2" type="CharacterBody2D" parent="." unique_id=1658978064]
+z_index = 1
+position = Vector2(2034, -192)
+script = ExtResource("53_gbqje")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassHopper2" unique_id=1584251562]
+position = Vector2(2133, 414.5)
+shape = SubResource("RectangleShape2D_6e250")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GrassHopper2" unique_id=2039248883]
+position = Vector2(2135, 408.25)
+scale = Vector2(0.089965865, 0.07446289)
+sprite_frames = SubResource("SpriteFrames_nptam")
+animation = &"walk"
+
+[node name="DamageArea" type="Area2D" parent="GrassHopper2" unique_id=2044331154]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassHopper2/DamageArea" unique_id=887534674]
+position = Vector2(2130, 389)
+shape = SubResource("RectangleShape2D_qhfxs")
+debug_color = Color(0.7224464, 0, 0.056923494, 0.41960785)
+
+[node name="GrassHopper3" type="CharacterBody2D" parent="." unique_id=1841551763]
+z_index = 1
+position = Vector2(6400, -343)
+script = ExtResource("53_gbqje")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassHopper3" unique_id=1703599750]
+position = Vector2(2133, 414.5)
+shape = SubResource("RectangleShape2D_6e250")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GrassHopper3" unique_id=274248301]
+position = Vector2(2135, 408.25)
+scale = Vector2(0.089965865, 0.07446289)
+sprite_frames = SubResource("SpriteFrames_nptam")
+animation = &"walk"
+
+[node name="DamageArea" type="Area2D" parent="GrassHopper3" unique_id=376612219]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassHopper3/DamageArea" unique_id=1187404779]
+position = Vector2(2130, 389)
+shape = SubResource("RectangleShape2D_qhfxs")
+debug_color = Color(0.7224464, 0, 0.056923494, 0.41960785)
+
+[connection signal="pressed" from="UI/Button" to="Player" method="_on_button_pressed"]
 [connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]
 [connection signal="body_entered" from="Nxt3" to="Player" method="_on_nxt_3_body_entered"]

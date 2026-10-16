@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b74gmfwyv3n4x" path="res://1791296126791.png" id="1_y5om2"]
 [ext_resource type="Texture2D" uid="uid://dc0auodglo4ry" path="res://Obstacle_img/1791824304249.png" id="2_l6ibx"]
+[ext_resource type="Texture2D" uid="uid://c5qly6crxhf3c" path="res://150187.png" id="3_eyba8"]
 [ext_resource type="Texture2D" uid="uid://348bpvrhree1" path="res://Obstacle_img/1791824325803.png" id="3_fnhb3"]
 [ext_resource type="Texture2D" uid="uid://bdrffvbhsjwue" path="res://Obstacle_img/149810.png" id="4_eyba8"]
 [ext_resource type="Texture2D" uid="uid://boql6ydadsrc1" path="res://Obstacle_img/149812.png" id="5_ola45"]
@@ -42,6 +43,13 @@
 [ext_resource type="Texture2D" uid="uid://bsd33gohddl1y" path="res://Characters_img/148878.png" id="40_yfa5r"]
 [ext_resource type="Texture2D" uid="uid://oy03tlfcab24" path="res://Obstacle_img/148001.png" id="41_l6ibx"]
 [ext_resource type="Texture2D" uid="uid://wnfjll11ly1v" path="res://Obstacle_img/148000.png" id="42_fnhb3"]
+[ext_resource type="Texture2D" uid="uid://cpfogbkg7i206" path="res://Characters_img/151119.png" id="44_xe8im"]
+[ext_resource type="Texture2D" uid="uid://dnttwiuctottk" path="res://Characters_img/151120.png" id="45_22ma8"]
+[ext_resource type="Texture2D" uid="uid://86bgyv8rk73w" path="res://Characters_img/151121.png" id="46_oaggd"]
+[ext_resource type="Texture2D" uid="uid://cuoscvat5eugf" path="res://Characters_img/151122.png" id="47_ary44"]
+[ext_resource type="Texture2D" uid="uid://c6les5prd3n22" path="res://Characters_img/151123.png" id="48_6i1qe"]
+[ext_resource type="Texture2D" uid="uid://4xguydc8eb08" path="res://Characters_img/151132.png" id="49_aecoh"]
+[ext_resource type="Texture2D" uid="uid://cxq6njdqkuk17" path="res://Characters_img/151133.png" id="50_cn0sw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bwyvv"]
 animations = [{
@@ -245,6 +253,43 @@ size = Vector2(43699, 166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnhb3"]
 size = Vector2(1524, 1482)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_anief"]
+size = Vector2(275.5, 248.25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xc32a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_xe8im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_22ma8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_oaggd")
+}],
+"loop": 1,
+"name": &"flymag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_ary44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_6i1qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_aecoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_cn0sw")
+}],
+"loop": 1,
+"name": &"magspell",
+"speed": 5.0
+}]
 
 [node name="p_b2" type="Node2D" unique_id=1634788415]
 
@@ -541,6 +586,11 @@ texture = ExtResource("2_l6ibx")
 position = Vector2(41152, 606)
 scale = Vector2(0.5041322, 0.456)
 texture = ExtResource("2_l6ibx")
+
+[node name="150187" type="Sprite2D" parent="Parallax2D" unique_id=1756563663]
+position = Vector2(554, 202)
+scale = Vector2(0.40443313, 0.35546875)
+texture = ExtResource("3_eyba8")
 
 [node name="Pathways" type="StaticBody2D" parent="." unique_id=1212506884]
 
@@ -897,6 +947,14 @@ texture = ExtResource("41_l6ibx")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Button" type="Button" parent="UI" unique_id=754485469]
+offset_left = 20.0
+offset_top = 28.0
+offset_right = 161.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 26
+text = "Back....."
+
 [node name="Nxt2" type="Area2D" parent="." unique_id=899776703]
 position = Vector2(11422, 351)
 script = SubResource("GDScript_l6ibx")
@@ -915,5 +973,19 @@ position = Vector2(595, 441)
 scale = Vector2(0.17666668, 0.18694189)
 texture = ExtResource("42_fnhb3")
 
+[node name="MagicHolo" type="CharacterBody2D" parent="." unique_id=1100993281]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MagicHolo" unique_id=1443149536]
+position = Vector2(37796.75, 31.875)
+shape = SubResource("RectangleShape2D_anief")
+
+[node name="animmagic" type="AnimatedSprite2D" parent="MagicHolo" unique_id=190315190]
+position = Vector2(37771, 20)
+scale = Vector2(0.14355391, 0.1542969)
+sprite_frames = SubResource("SpriteFrames_xc32a")
+animation = &"magspell"
+frame_progress = 0.42610085
+
 [connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]
+[connection signal="pressed" from="UI/Button" to="Player" method="_on_button_pressed"]
 [connection signal="body_entered" from="Nxt2" to="Player" method="_on_nxt_2_body_entered"]

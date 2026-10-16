@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://df6g01tto1ry3"]
+
+[ext_resource type="Script" uid="uid://c3ijcq3endqr1" path="res://Scenes/settings.gd" id="1_i44u3"]
+[ext_resource type="Texture2D" uid="uid://beedt2h301atl" path="res://Obstacle_img/1792143754819.png" id="2_lhmql"]
+
+[node name="settings" type="Node2D" unique_id=1219353208]
+script = ExtResource("1_i44u3")
+
+[node name="1792143754819" type="Sprite2D" parent="." unique_id=528331661]
+position = Vector2(574.875, 402.5)
+scale = Vector2(0.5545966, 0.5136719)
+texture = ExtResource("2_lhmql")
+
+[node name="Button" type="Button" parent="." unique_id=197219601]
+offset_left = 18.0
+offset_top = 42.0
+offset_right = 290.0
+offset_bottom = 129.0
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

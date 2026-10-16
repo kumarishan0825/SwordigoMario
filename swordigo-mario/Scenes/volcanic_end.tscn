@@ -1,3 +1,39 @@
 [gd_scene format=3 uid="uid://dmcntwtw71ivx"]
 
+[ext_resource type="Script" uid="uid://br658f47uj4nq" path="res://Scenes/volcanic_end.gd" id="1_r58o2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_anief"]
+bg_color = Color(0.13071623, 0.13921833, 0.14387861, 1)
+
 [node name="volcanic_end" type="Node2D" unique_id=1006127215]
+script = ExtResource("1_r58o2")
+
+[node name="Panel" type="Panel" parent="." unique_id=745162334]
+offset_right = 1158.0
+offset_bottom = 657.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_anief")
+
+[node name="Label" type="Label" parent="." unique_id=222896783]
+offset_left = 245.0
+offset_top = 120.0
+offset_right = 828.0
+offset_bottom = 293.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Label" unique_id=707231734]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -8.0
+offset_right = 639.0
+offset_bottom = 189.0
+theme_override_font_sizes/normal_font_size = 41
+text = "This is under development and will be release after next update..........................."
+
+[node name="Button" type="Button" parent="." unique_id=537864735]
+offset_left = 392.0
+offset_top = 409.0
+offset_right = 697.0
+offset_bottom = 515.0
+theme_override_font_sizes/font_size = 24
+text = "Back to Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

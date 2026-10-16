@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://348bpvrhree1" path="res://Obstacle_img/1791824325803.png" id="2_jvtxd"]
 [ext_resource type="Texture2D" uid="uid://wnfjll11ly1v" path="res://Obstacle_img/148000.png" id="3_jvtxd"]
 [ext_resource type="Texture2D" uid="uid://dy71unm2wuh2n" path="res://Obstacle_img/149785.png" id="3_o5dlb"]
+[ext_resource type="Texture2D" uid="uid://c14klf2w3p2bw" path="res://150189.png" id="4_o5dlb"]
 [ext_resource type="Texture2D" uid="uid://d0fjtbbv5cabi" path="res://Obstacle_img/149790.png" id="4_vhf14"]
 [ext_resource type="Texture2D" uid="uid://cvmlxuhwi52ie" path="res://Obstacle_img/149788.png" id="5_72xyq"]
 [ext_resource type="Texture2D" uid="uid://u4h2p0ditk2q" path="res://Obstacle_img/149789.png" id="6_7tlui"]
@@ -39,6 +40,16 @@
 [ext_resource type="Texture2D" uid="uid://cda6sf1f05dde" path="res://Characters_img/148877.png" id="36_sk4ik"]
 [ext_resource type="Texture2D" uid="uid://bsd33gohddl1y" path="res://Characters_img/148878.png" id="37_2j7cb"]
 [ext_resource type="Texture2D" uid="uid://oy03tlfcab24" path="res://Obstacle_img/148001.png" id="38_iquui"]
+[ext_resource type="Texture2D" uid="uid://cw5bbusqv4q3y" path="res://Characters_img/148232.png" id="41_07coc"]
+[ext_resource type="Script" uid="uid://ddyq7crlcxfeb" path="res://Scenes/mega_boss.gd" id="41_d2adr"]
+[ext_resource type="Texture2D" uid="uid://cilythgkd7cln" path="res://Characters_img/148233.png" id="42_d2adr"]
+[ext_resource type="Texture2D" uid="uid://bv0mmgddhhwnt" path="res://Characters_img/148234.png" id="43_purh4"]
+[ext_resource type="Texture2D" uid="uid://ch4rnjbouc6jc" path="res://Characters_img/148489.png" id="44_adqxj"]
+[ext_resource type="Texture2D" uid="uid://bvhie7lhcxhef" path="res://Characters_img/148490.png" id="45_fkdev"]
+[ext_resource type="Texture2D" uid="uid://daewin3anosmq" path="res://Characters_img/148491.png" id="46_hp62r"]
+[ext_resource type="Texture2D" uid="uid://bk75ir5e4c86x" path="res://Characters_img/148492.png" id="47_iuwyj"]
+[ext_resource type="Texture2D" uid="uid://bfmwiqavck3fj" path="res://Characters_img/148493.png" id="48_mslrc"]
+[ext_resource type="Texture2D" uid="uid://b4uowync7i56j" path="res://Characters_img/148494.png" id="49_kwlbw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_anief"]
 bg_color = Color(0.2933549, 0.53103334, 0.7592852, 1)
@@ -241,6 +252,52 @@ size = Vector2(152.5, 155)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xh2t"]
 size = Vector2(51599, 219)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc32a"]
+size = Vector2(420.5, 383)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_anief"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_adqxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_fkdev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_hp62r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iuwyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_mslrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_kwlbw")
+}],
+"loop": 1,
+"name": &"fight",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_07coc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_d2adr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_purh4")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07coc"]
+size = Vector2(513.5, 451.125)
+
 [node name="p_b_3" type="Node2D" unique_id=1502328220]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1297032310]
@@ -256,9 +313,9 @@ expand_mode = 1
 
 [node name="BG24" type="TextureRect" parent="Parallax2D" unique_id=1783941685]
 offset_left = -2877.0
-offset_top = -536.0
+offset_top = -509.0
 offset_right = -365.0
-offset_bottom = 943.0
+offset_bottom = 970.0
 texture = ExtResource("1_xlkg3")
 expand_mode = 1
 
@@ -598,13 +655,18 @@ offset_right = 41100.0
 offset_bottom = 887.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_anief")
 
-[node name="148000" type="Sprite2D" parent="Parallax2D" unique_id=825273844]
-position = Vector2(520, 438)
-scale = Vector2(0.25333333, 0.2611607)
+[node name="148001" type="Sprite2D" parent="." unique_id=43927848]
+position = Vector2(43283, 162)
 texture = ExtResource("3_jvtxd")
 
-[node name="148001" type="Sprite2D" parent="Parallax2D" unique_id=43927848]
-position = Vector2(43283, 162)
+[node name="150189" type="Sprite2D" parent="." unique_id=1006185080]
+position = Vector2(530, 194.99998)
+scale = Vector2(0.5508721, 0.49479166)
+texture = ExtResource("4_o5dlb")
+
+[node name="148000" type="Sprite2D" parent="." unique_id=825273844]
+position = Vector2(520, 438)
+scale = Vector2(0.25333333, 0.2611607)
 texture = ExtResource("3_jvtxd")
 
 [node name="pathways" type="StaticBody2D" parent="." unique_id=1738408903]
@@ -971,4 +1033,34 @@ texture = ExtResource("38_iquui")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Button" type="Button" parent="UI" unique_id=515309282]
+offset_left = 20.0
+offset_top = 28.0
+offset_right = 161.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 26
+text = "Back....."
+
+[node name="MegaBoss" type="CharacterBody2D" parent="." unique_id=709503634]
+script = ExtResource("41_d2adr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MegaBoss" unique_id=1926687699]
+position = Vector2(43252, 549)
+shape = SubResource("RectangleShape2D_xc32a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MegaBoss" unique_id=657216399]
+position = Vector2(43281, 558)
+scale = Vector2(0.55333114, 0.54464287)
+sprite_frames = SubResource("SpriteFrames_anief")
+animation = &"fight"
+frame_progress = 0.016736751
+
+[node name="DamageArea" type="Area2D" parent="MegaBoss" unique_id=406007]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MegaBoss/DamageArea" unique_id=995665376]
+position = Vector2(43256.75, 508.5625)
+shape = SubResource("RectangleShape2D_07coc")
+debug_color = Color(0.606796, 0.1890338, 0.20127743, 0.41960785)
+
 [connection signal="body_entered" from="VoidArea" to="Player" method="_on_void_area_body_entered"]
+[connection signal="pressed" from="UI/Button" to="Player" method="_on_button_pressed"]
