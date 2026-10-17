@@ -32,17 +32,21 @@ Now he has to find a powerful magical sword called the Mageblade, which is the o
 As the story goes on, he finds out that the Mageblade has been broken into pieces, so he has to collect them and make the sword complete again. His master's spirit also helps him on the way.
 
 In the end, he faces the main source of the darkness and fights to save the world. For me, Swordigo is not only about fighting enemies, it is also about courage, exploring new places and becoming stronger when life gives you difficult challenges.
+
 ---
+
 ### Visuals/Arts :-
 https://www.pixilart.com/ :- For designing pixelated work and additionally I took help via my phone through Pixellabs.
 gemini.google.com :- for reconsrtuct the same images to save time but also i do use for betterment of the project.
 
-###GDScript Tutorials :-
+### GDScript Tutorials :-
 https://youtu.be/zHYkcJyE52g?si=PzgeIhijcpO71c9v -> for understanding the basics of making buttons.
 https://youtu.be/V9kshvtj6s0?si=2OYFv96Xo20SFQxR -> for learning about sprites animation 2D.
 https://youtu.be/oED12Mo2018?si=MKt242utlFfkgrCh -> I got some useful resources for my player code
 
-### Help & Inspiration:-
+--- 
+
+### Help & Inspiration :-
 https://en.wikipedia.org/wiki/Swordigo :- Huge Contribution to Touch Foo games because of them , I had experienced this game in my childhood and my one of the favourite games in offline and the idea is too Jaw dropping.
 https://github.com/mairemare/WitchyWare/blob/main/README.md#witchyware :- For README Layout
 ---
