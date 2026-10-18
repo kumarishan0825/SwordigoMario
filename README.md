@@ -5,12 +5,8 @@
 ![iNTRO OF THE GAME](img/INTRO.png)
 
 ---
-### Interface and UI :-
 
-![UI](img/ISO.png)
-
----
-### Protagonist Appearance :-
+### Protagonist Appearance and UI :-
 
 ![Player](img/solepuri.png)
 
