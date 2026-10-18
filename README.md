@@ -8,7 +8,7 @@
 
 ### Protagonist Appearance and UI :-
 
-![Player](img/solepuri.png)
+![Player](img/Swordigo_Mario (BETA Version) by ishan0825 - Brave 18-10-2026 15_01_43.png)
 
 ---
 
