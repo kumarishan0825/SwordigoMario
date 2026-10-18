@@ -37,7 +37,6 @@ In the end, he faces the main source of the darkness and fights to save the worl
 
 ### Visuals/Arts :-
 https://www.pixilart.com/ :- For designing pixelated work and additionally I took help via my phone through Pixellabs.
-gemini.google.com :- for reconsrtuct the same images to save time but also i do use for betterment of the project.
 
 ### GDScript Tutorials :-
 https://youtu.be/zHYkcJyE52g?si=PzgeIhijcpO71c9v -> for understanding the basics of making buttons.
