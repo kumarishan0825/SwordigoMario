@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://dlqgk41kpksec"]
 
-[ext_resource type="Texture2D" uid="uid://bosa8ow1b5xld" path="res://1791967238030.png" id="1_dpo31"]
-[ext_resource type="Texture2D" uid="uid://bquuyfnkrw0nq" path="res://1791948006449.png" id="2_thl42"]
-[ext_resource type="Texture2D" uid="uid://dvt6ieb3yleln" path="res://1791964481350.png" id="3_f47t4"]
+[ext_resource type="Texture2D" uid="uid://ck81oqtut2gkj" path="res://CWBG.png" id="1_6cpwq"]
+[ext_resource type="Texture2D" uid="uid://duq6g8k2ti3t7" path="res://CW click.png" id="2_gbqje"]
 [ext_resource type="Texture2D" uid="uid://348bpvrhree1" path="res://Obstacle_img/1791824325803.png" id="4_d4s4l"]
 [ext_resource type="Texture2D" uid="uid://bdrffvbhsjwue" path="res://Obstacle_img/149810.png" id="5_kbl3b"]
 [ext_resource type="Texture2D" uid="uid://boql6ydadsrc1" path="res://Obstacle_img/149812.png" id="6_ariru"]
@@ -355,7 +354,7 @@ offset_left = -390.0
 offset_top = -263.0
 offset_right = 1523.0
 offset_bottom = 910.0
-texture = ExtResource("1_dpo31")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect" unique_id=1106718687]
@@ -371,7 +370,7 @@ offset_left = -2298.0
 offset_top = -263.0
 offset_right = -385.0
 offset_bottom = 910.0
-texture = ExtResource("1_dpo31")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect27" unique_id=98837869]
@@ -387,7 +386,7 @@ offset_left = 1495.0
 offset_top = -266.0
 offset_right = 3408.0
 offset_bottom = 907.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect2" unique_id=2090680081]
@@ -403,7 +402,7 @@ offset_left = 3392.0
 offset_top = -261.0
 offset_right = 5305.0
 offset_bottom = 912.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect3" unique_id=241552260]
@@ -419,7 +418,7 @@ offset_left = 5303.0
 offset_top = -267.0
 offset_right = 7216.0
 offset_bottom = 906.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect4" unique_id=2016025694]
@@ -435,7 +434,7 @@ offset_left = 7203.0
 offset_top = -256.0
 offset_right = 9116.0
 offset_bottom = 917.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect5" unique_id=1481571111]
@@ -451,7 +450,7 @@ offset_left = 9101.0
 offset_top = -239.0
 offset_right = 11014.0
 offset_bottom = 934.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect6" unique_id=440451919]
@@ -467,7 +466,7 @@ offset_left = 11008.0
 offset_top = -230.0
 offset_right = 12921.0
 offset_bottom = 943.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect7" unique_id=1318153219]
@@ -483,7 +482,7 @@ offset_left = 12915.0
 offset_top = -221.0
 offset_right = 14828.0
 offset_bottom = 952.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect8" unique_id=115069595]
@@ -499,7 +498,7 @@ offset_left = 14805.0
 offset_top = -221.0
 offset_right = 16718.0
 offset_bottom = 952.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect9" unique_id=404926787]
@@ -515,7 +514,7 @@ offset_left = 16703.0
 offset_top = -230.0
 offset_right = 18616.0
 offset_bottom = 943.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect10" unique_id=1020783894]
@@ -531,7 +530,7 @@ offset_left = 18610.0
 offset_top = -238.0
 offset_right = 20523.0
 offset_bottom = 935.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect11" unique_id=1223978842]
@@ -547,7 +546,7 @@ offset_left = 20500.0
 offset_top = -221.0
 offset_right = 22413.0
 offset_bottom = 952.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect12" unique_id=1223906014]
@@ -563,7 +562,7 @@ offset_left = 22406.0
 offset_top = -221.0
 offset_right = 24319.0
 offset_bottom = 952.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect13" unique_id=534534755]
@@ -579,7 +578,7 @@ offset_left = 24312.0
 offset_top = -221.0
 offset_right = 26225.0
 offset_bottom = 952.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect14" unique_id=817815158]
@@ -595,7 +594,7 @@ offset_left = 26209.0
 offset_top = -240.0
 offset_right = 28122.0
 offset_bottom = 933.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect15" unique_id=165672930]
@@ -611,7 +610,7 @@ offset_left = 28125.0
 offset_top = -230.0
 offset_right = 30038.0
 offset_bottom = 943.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect16" unique_id=724472537]
@@ -627,7 +626,7 @@ offset_left = 30041.0
 offset_top = -220.0
 offset_right = 31954.0
 offset_bottom = 953.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect17" unique_id=1175458050]
@@ -643,7 +642,7 @@ offset_left = 31929.0
 offset_top = -230.0
 offset_right = 33842.0
 offset_bottom = 943.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect18" unique_id=634231099]
@@ -659,7 +658,7 @@ offset_left = 33836.0
 offset_top = -230.0
 offset_right = 35749.0
 offset_bottom = 943.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect19" unique_id=695743922]
@@ -675,7 +674,7 @@ offset_left = 35744.0
 offset_top = -230.0
 offset_right = 37657.0
 offset_bottom = 943.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect20" unique_id=396832640]
@@ -691,7 +690,7 @@ offset_left = 37639.0
 offset_top = -223.0
 offset_right = 39552.0
 offset_bottom = 950.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect21" unique_id=349375125]
@@ -707,7 +706,7 @@ offset_left = 39544.0
 offset_top = -234.0
 offset_right = 41457.0
 offset_bottom = 939.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect22" unique_id=1154521896]
@@ -723,7 +722,7 @@ offset_left = 41449.0
 offset_top = -229.0
 offset_right = 43362.0
 offset_bottom = 944.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect23" unique_id=1530491672]
@@ -739,7 +738,7 @@ offset_left = 43347.0
 offset_top = -222.0
 offset_right = 45260.0
 offset_bottom = 951.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D/TextureRect24" unique_id=169120901]
@@ -764,7 +763,7 @@ offset_left = 47138.0
 offset_top = -232.0
 offset_right = 49051.0
 offset_bottom = 941.0
-texture = ExtResource("3_f47t4")
+texture = ExtResource("2_gbqje")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D2/TextureRect26" unique_id=1154645595]
@@ -780,7 +779,7 @@ offset_left = 45231.0
 offset_top = -222.0
 offset_right = 47144.0
 offset_bottom = 951.0
-texture = ExtResource("2_thl42")
+texture = ExtResource("1_6cpwq")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Parallax2D2/TextureRect25" unique_id=1097258199]

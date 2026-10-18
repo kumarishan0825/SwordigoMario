@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://dp5p31ss250tx"]
 
-[ext_resource type="Texture2D" uid="uid://dldc1rxqx4fxi" path="res://1791296263598.png" id="1_xlkg3"]
+[ext_resource type="Texture2D" uid="uid://dmru64ekoj38p" path="res://PBBG I.png" id="1_07coc"]
 [ext_resource type="Texture2D" uid="uid://348bpvrhree1" path="res://Obstacle_img/1791824325803.png" id="2_jvtxd"]
 [ext_resource type="Texture2D" uid="uid://wnfjll11ly1v" path="res://Obstacle_img/148000.png" id="3_jvtxd"]
 [ext_resource type="Texture2D" uid="uid://dy71unm2wuh2n" path="res://Obstacle_img/149785.png" id="3_o5dlb"]
-[ext_resource type="Texture2D" uid="uid://c14klf2w3p2bw" path="res://150189.png" id="4_o5dlb"]
 [ext_resource type="Texture2D" uid="uid://d0fjtbbv5cabi" path="res://Obstacle_img/149790.png" id="4_vhf14"]
 [ext_resource type="Texture2D" uid="uid://cvmlxuhwi52ie" path="res://Obstacle_img/149788.png" id="5_72xyq"]
 [ext_resource type="Texture2D" uid="uid://u4h2p0ditk2q" path="res://Obstacle_img/149789.png" id="6_7tlui"]
@@ -308,7 +307,7 @@ offset_left = -366.0
 offset_top = -502.0
 offset_right = 1536.0
 offset_bottom = 977.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG24" type="TextureRect" parent="Parallax2D" unique_id=1783941685]
@@ -316,7 +315,7 @@ offset_left = -2877.0
 offset_top = -509.0
 offset_right = -365.0
 offset_bottom = 970.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG2" type="TextureRect" parent="Parallax2D" unique_id=1751381926]
@@ -324,7 +323,7 @@ offset_left = 1522.0
 offset_top = -515.0
 offset_right = 3424.0
 offset_bottom = 978.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG3" type="TextureRect" parent="Parallax2D" unique_id=1257384365]
@@ -332,7 +331,7 @@ offset_left = 3403.0
 offset_top = -496.0
 offset_right = 5305.0
 offset_bottom = 975.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG4" type="TextureRect" parent="Parallax2D" unique_id=227134905]
@@ -340,7 +339,7 @@ offset_left = 5304.0
 offset_top = -529.0
 offset_right = 7206.0
 offset_bottom = 978.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG5" type="TextureRect" parent="Parallax2D" unique_id=1576413645]
@@ -348,7 +347,7 @@ offset_left = 7179.0
 offset_top = -534.0
 offset_right = 9081.0
 offset_bottom = 988.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG6" type="TextureRect" parent="Parallax2D" unique_id=371418594]
@@ -356,7 +355,7 @@ offset_left = 9070.0
 offset_top = -516.0
 offset_right = 10972.0
 offset_bottom = 991.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG7" type="TextureRect" parent="Parallax2D" unique_id=392945236]
@@ -364,7 +363,7 @@ offset_left = 10954.0
 offset_top = -495.0
 offset_right = 12856.0
 offset_bottom = 991.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG8" type="TextureRect" parent="Parallax2D" unique_id=1531525513]
@@ -372,7 +371,7 @@ offset_left = 12835.0
 offset_top = -476.0
 offset_right = 14737.0
 offset_bottom = 995.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG9" type="TextureRect" parent="Parallax2D" unique_id=706253751]
@@ -380,7 +379,7 @@ offset_left = 14716.0
 offset_top = -476.0
 offset_right = 16618.0
 offset_bottom = 995.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG10" type="TextureRect" parent="Parallax2D" unique_id=607014754]
@@ -388,7 +387,7 @@ offset_left = 16594.0
 offset_top = -469.0
 offset_right = 18496.0
 offset_bottom = 1002.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG11" type="TextureRect" parent="Parallax2D" unique_id=627907978]
@@ -396,7 +395,7 @@ offset_left = 18485.0
 offset_top = -480.0
 offset_right = 20387.0
 offset_bottom = 1006.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG12" type="TextureRect" parent="Parallax2D" unique_id=231377497]
@@ -404,7 +403,7 @@ offset_left = 20386.0
 offset_top = -473.0
 offset_right = 22288.0
 offset_bottom = 1006.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG13" type="TextureRect" parent="Parallax2D" unique_id=703944888]
@@ -412,7 +411,7 @@ offset_left = 22277.0
 offset_top = -458.0
 offset_right = 24179.0
 offset_bottom = 999.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG14" type="TextureRect" parent="Parallax2D" unique_id=1417048036]
@@ -420,7 +419,7 @@ offset_left = 24172.0
 offset_top = -437.0
 offset_right = 26074.0
 offset_bottom = 999.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG15" type="TextureRect" parent="Parallax2D" unique_id=2060985265]
@@ -428,7 +427,7 @@ offset_left = 26057.0
 offset_top = -411.0
 offset_right = 27959.0
 offset_bottom = 996.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG16" type="TextureRect" parent="Parallax2D" unique_id=20081425]
@@ -436,7 +435,7 @@ offset_left = 27932.0
 offset_top = -397.0
 offset_right = 29834.0
 offset_bottom = 996.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG17" type="TextureRect" parent="Parallax2D" unique_id=2033867192]
@@ -444,7 +443,7 @@ offset_left = 29833.0
 offset_top = -382.0
 offset_right = 31735.0
 offset_bottom = 996.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG18" type="TextureRect" parent="Parallax2D" unique_id=817660344]
@@ -452,7 +451,7 @@ offset_left = 31728.0
 offset_top = -390.0
 offset_right = 33630.0
 offset_bottom = 1003.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG19" type="TextureRect" parent="Parallax2D" unique_id=942126700]
@@ -460,7 +459,7 @@ offset_left = 33616.0
 offset_top = -362.0
 offset_right = 35518.0
 offset_bottom = 1016.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG20" type="TextureRect" parent="Parallax2D" unique_id=884087395]
@@ -468,7 +467,7 @@ offset_left = 35511.0
 offset_top = -352.0
 offset_right = 37413.0
 offset_bottom = 1019.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG21" type="TextureRect" parent="Parallax2D" unique_id=1831601013]
@@ -476,7 +475,7 @@ offset_left = 37406.0
 offset_top = -359.0
 offset_right = 39308.0
 offset_bottom = 1019.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG22" type="TextureRect" parent="Parallax2D" unique_id=1614840643]
@@ -484,7 +483,7 @@ offset_left = 39297.0
 offset_top = -359.0
 offset_right = 41199.0
 offset_bottom = 1019.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG25" type="TextureRect" parent="Parallax2D" unique_id=1925659796]
@@ -492,7 +491,7 @@ offset_left = 45037.0
 offset_top = -407.0
 offset_right = 48741.0
 offset_bottom = 1553.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="BG23" type="TextureRect" parent="Parallax2D" unique_id=110757064]
@@ -500,7 +499,7 @@ offset_left = 41174.0
 offset_top = -409.0
 offset_right = 45024.0
 offset_bottom = 1557.0
-texture = ExtResource("1_xlkg3")
+texture = ExtResource("1_07coc")
 expand_mode = 1
 
 [node name="1791824325803" type="Sprite2D" parent="Parallax2D" unique_id=1936609816]
@@ -658,11 +657,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_anief")
 [node name="148001" type="Sprite2D" parent="." unique_id=43927848]
 position = Vector2(43283, 162)
 texture = ExtResource("3_jvtxd")
-
-[node name="150189" type="Sprite2D" parent="." unique_id=1006185080]
-position = Vector2(530, 194.99998)
-scale = Vector2(0.5508721, 0.49479166)
-texture = ExtResource("4_o5dlb")
 
 [node name="148000" type="Sprite2D" parent="." unique_id=825273844]
 position = Vector2(520, 438)
@@ -871,7 +865,7 @@ polygon = PackedVector2Array(19325, 409, 19576, 407, 19551, 477, 19457, 505, 193
 polygon = PackedVector2Array(19724, 408, 19756, 398, 19794, 405, 19788, 444, 19758, 466, 19726, 445, 19719, 403)
 
 [node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="pathways" unique_id=587200120]
-polygon = PackedVector2Array(19930, 417, 19978, 393, 19979, 422, 19955, 457, 19932, 443)
+polygon = PackedVector2Array(19920, 422, 19978, 393, 19982, 423, 19960, 470, 19930, 453)
 
 [node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="pathways" unique_id=1305663894]
 polygon = PackedVector2Array(20093, 415, 20267, 417, 20470, 532, 20618, 535, 20662, 511, 21022, 513, 21207, 411, 21461, 415, 21459, 498, 21104, 637, 20436, 654, 20091, 506)

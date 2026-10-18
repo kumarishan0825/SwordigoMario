@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bj10av6e01cf1"]
 
-[ext_resource type="Texture2D" uid="uid://cbkqiftkmu3t" path="res://1791296197031.png" id="2_hwl5u"]
+[ext_resource type="Texture2D" uid="uid://cgnhxee3mu6dx" path="res://PBBG ni.png" id="1_if8uo"]
 [ext_resource type="Texture2D" uid="uid://dc0auodglo4ry" path="res://Obstacle_img/1791824304249.png" id="2_vty1q"]
 [ext_resource type="Texture2D" uid="uid://cbr0q8f6exk34" path="res://Characters_img/147687.png" id="3_cfpli"]
 [ext_resource type="Script" uid="uid://clta5b8n833id" path="res://Scenes/player.gd" id="3_hwl5u"]
@@ -302,7 +302,7 @@ offset_right = 1483.0
 offset_bottom = 900.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hwl5u")
+texture = ExtResource("1_if8uo")
 expand_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="Parallax2D" unique_id=290852434]
@@ -315,7 +315,7 @@ offset_right = 3604.0
 offset_bottom = 854.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hwl5u")
+texture = ExtResource("1_if8uo")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="Parallax2D" unique_id=1211835589]
@@ -328,7 +328,7 @@ offset_right = 5738.0
 offset_bottom = 852.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hwl5u")
+texture = ExtResource("1_if8uo")
 expand_mode = 1
 
 [node name="TextureRect4" type="TextureRect" parent="Parallax2D" unique_id=1111027798]
@@ -341,7 +341,7 @@ offset_right = 7859.0
 offset_bottom = 856.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hwl5u")
+texture = ExtResource("1_if8uo")
 expand_mode = 1
 
 [node name="TextureRect5" type="TextureRect" parent="Parallax2D" unique_id=1444565849]
@@ -354,7 +354,7 @@ offset_right = 9991.0
 offset_bottom = 852.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hwl5u")
+texture = ExtResource("1_if8uo")
 expand_mode = 1
 
 [node name="TextureRect6" type="TextureRect" parent="Parallax2D" unique_id=1145740781]
@@ -367,7 +367,7 @@ offset_right = 12116.0
 offset_bottom = 856.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hwl5u")
+texture = ExtResource("1_if8uo")
 expand_mode = 1
 
 [node name="1791824304249" type="Sprite2D" parent="Parallax2D" unique_id=411953000]

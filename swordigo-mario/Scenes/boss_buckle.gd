@@ -7,18 +7,17 @@ extends CharacterBody2D
 @export var detect_height = 100.0
 @export var health = 3.0
 @export var spell_damage = 0.5
-@export var spell_speed = 250.0
 @export var cast_cooldown = 2.0
 @export var cast_frame = 2
 @export var spell_offset = Vector2(30, -10)
-@export var sprite_faces_right = true
-@export var show_zone = true
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@export var show_zone = true 
 var dir = 1.0
+@export var sprite_faces_right = true
+@export var spell_speed = 250.0
 var zl = 0.0
 var zr = 0.0
-var turn_cd = 0.0
 var cd = 1.0
 var stun = 0.0
 var casting = false
@@ -26,6 +25,7 @@ var cast_done = false
 var dead = false
 var player = null
 
+var turn_cd = 0.0
 @onready var sprite = $AnimatedSprite2D
 
 func _ready():
