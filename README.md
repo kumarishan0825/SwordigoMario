@@ -34,6 +34,7 @@ In the end, he faces the main source of the darkness and fights to save the worl
 
 ### Visuals/Arts :-
 https://www.pixilart.com/ :- For designing pixelated work and additionally I took help via my phone through Pixellabs.
+and obstacle works were done by my best friend because he uses paid software and do this that artwork so he helped me
 
 ### GDScript Tutorials :-
 https://youtu.be/zHYkcJyE52g?si=PzgeIhijcpO71c9v -> for understanding the basics of making buttons.
